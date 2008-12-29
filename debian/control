@@ -1,0 +1,66 @@
+Source: mlt
+Priority: optional
+Maintainer: Fathi Boudra <fabo@debian.org>
+Uploaders: Patrick Matthäi <patrick.matthaei@web.de>
+Build-Depends: cdbs, debhelper (>= 6), quilt, ffmpeg, imagemagick,
+ kdelibs5-dev, ladspa-sdk, libavdevice-dev, libavformat-dev, libdv4-dev,
+ libgtk2.0-dev, libjack-dev, libquicktime-dev, libsamplerate-dev,
+ libsdl1.2-dev, libsox-dev (>= 14.1.0), libswscale-dev, libvorbis-dev,
+ libxine-dev, libxml2-dev
+Standards-Version: 3.8.0
+Section: libs
+Homepage: http://www.mltframework.org
+
+Package: libmlt-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libmlt1 (= ${binary:Version})
+Description: multimedia framework (development)
+ MLT is an open source multimedia framework, designed and developed for
+ television broadcasting. It provides a toolkit for broadcasters, video
+ editors, media players, transcoders, web streamers and many more types of
+ applications. The functionality of the system is provided via an assortment
+ of ready to use tools, xml authoring components, and an extendible plug-in
+ based API.
+ .
+ This package contains the static libraries and headers for developing
+ applications that use the MLT multimedia framework.
+
+Package: libmlt1
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: libmlt0.2, libmlt0.2.5
+Replaces: libmlt0.2, libmlt0.2.5
+Description: multimedia framework (runtime)
+ MLT is an open source multimedia framework, designed and developed for
+ television broadcasting. It provides a toolkit for broadcasters, video
+ editors, media players, transcoders, web streamers and many more types of
+ applications. The functionality of the system is provided via an assortment
+ of ready to use tools, xml authoring components, and an extendible plug-in
+ based API.
+ .
+ This package contains the files necessary for running applications that
+ use the MLT multimedia framework.
+
+Package: libmlt-data
+Architecture: all
+Depends: ${misc:Depends}
+Enhances: libmlt1
+Description: multimedia framework (data)
+ MLT is an open source multimedia framework, designed and developed for
+ television broadcasting. It provides a toolkit for broadcasters, video
+ editors, media players, transcoders, web streamers and many more types of
+ applications. The functionality of the system is provided via an assortment
+ of ready to use tools, xml authoring components, and an extendible plug-in
+ based API.
+ .
+ This package contains the data files for the MLT multimedia framework.
+
+Package: inigo
+Section: utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: command line media player and video editor
+ Inigo is a powerful multitrack command line oriented video editor.
+

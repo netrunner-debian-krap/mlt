@@ -1,0 +1,11 @@
+--- a/src/framework/mlt_factory.c
++++ b/src/framework/mlt_factory.c
+@@ -26,7 +26,7 @@
+ #include <string.h>
+ 
+ #define PREFIX_LIB LIBDIR "/mlt"
+-#define PREFIX_DATA PREFIX "/share/mlt"
++#define PREFIX_DATA PREFIX "/lib/mlt"
+ 
+ /** Singleton repositories
+ */

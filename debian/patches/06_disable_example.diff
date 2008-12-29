@@ -1,0 +1,11 @@
+--- a/Makefile
++++ b/Makefile
+@@ -2,8 +2,6 @@
+ 		  src/inigo \
+ 		  src/valerie \
+ 		  src/miracle \
+-		  src/humperdink \
+-		  src/albino \
+ 		  src/modules \
+ 		  profiles
+ 

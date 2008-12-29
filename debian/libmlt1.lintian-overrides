@@ -1,0 +1,2 @@
+# Upstream soname handling is broken. I expect to fix this issue on future uploads.
+libmlt1: package-name-doesnt-match-sonames libmiracle1 libmlt1 libvalerie1

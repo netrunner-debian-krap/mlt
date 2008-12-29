@@ -1,0 +1,13 @@
+usr/lib/libmiracle.so.*
+usr/lib/libmlt.so.*
+usr/lib/libvalerie.so.*
+usr/lib/mlt/libmlt*.so
+usr/lib/mlt/avformat/producer_avformat.yml
+usr/lib/mlt/data_fx.properties
+usr/lib/mlt/fezzik.dict
+usr/lib/mlt/fezzik.ini
+usr/lib/mlt/metaschema.yaml
+usr/lib/mlt/westley.dtd
+usr/lib/mlt/feeds/NTSC/*.properties
+usr/lib/mlt/feeds/PAL/*.properties
+

@@ -1,0 +1,53 @@
+mlt (0.3.2-2) unstable; urgency=low
+
+  * Add Patrick Matthäi as co-maintainer.
+  * Add Sox 14.2.0 support. (Closes: #507610, #509340)
+  * Update debian/rules: disable motion estimation module. (Closes: #506844)
+  * Fix lintian warning: debhelper-but-no-misc-depends.
+
+ -- Fathi Boudra <fabo@debian.org>  Mon, 29 Dec 2008 17:07:28 +0100
+
+mlt (0.3.2-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #471079, #482254, #499329)
+  * Remove 01_add_sox_14_support patch. Merged upstream.
+  * Add 10_fix_xine_module_cflags patch to fix xine module CFLAGS.
+  * Refresh patches:
+    - 03_update_prefix_data
+    - 04_update_install_target
+    - 07_custom_ldflags
+    - 08_add_missing_ldlags
+    - 09_add_gcc4.3_support
+  * Update debian/control:
+    - Build-depends on kdelibs5-dev instead of kdelibs4-dev.
+    - Build-depends on libavdevice-dev.
+    - Bump libmlt soname. libmlt1 conflicts/replaces libmlt0.2.
+  * Update debian/copyright: Add oldfilm and frei0r modules.
+  * Update installed files.
+  * Update debian/rules:
+    - Remove motion estimation option from EXTRA_CONFIGURE_OPTS.
+    - Add --qimage-libdir configure option to detect Qt 4.
+
+ -- Fathi Boudra <fabo@debian.org>  Fri, 14 Nov 2008 11:03:40 +0100
+
+mlt (0.2.4-3) unstable; urgency=low
+
+  * Update gcc-4.3 support patch. Link math library against libmltsox.
+    (Closes: #475191)
+
+ -- Fathi Boudra <fabo@debian.org>  Thu, 10 Apr 2008 11:37:46 +0200
+
+mlt (0.2.4-2) unstable; urgency=low
+
+  * Add versioned build dependency on libsox-dev >= 14.0.1-2. Previous
+    libsox-dev package doesn't contains libsfx.a and libsfx.so symlink.
+    (Closes: #469900)
+
+ -- Fathi Boudra <fabo@debian.org>  Sun, 09 Mar 2008 12:14:23 +0100
+
+mlt (0.2.4-1) unstable; urgency=low
+
+  * Initial release. (Closes: #463796)
+
+ -- Fathi Boudra <fabo@debian.org>  Sat, 26 Jan 2008 19:31:08 +0100
+

@@ -1,0 +1,10 @@
+--- a/configure
++++ b/configure
+@@ -70,6 +70,7 @@
+ 		Linux)
+ 		echo "OPTIMISATIONS+=-ffast-math"
+ 		echo "CFLAGS+=-pthread"
++		echo "LDFLAGS+= -Wl,--no-undefined -Wl,--as-needed"
+ 		echo "SHFLAGS=-shared"
+ 		echo "LIBDL=-ldl"
+ 		echo "RDYNAMIC=-rdynamic"

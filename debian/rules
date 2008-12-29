@@ -1,0 +1,37 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/rules/patchsys-quilt.mk
+include /usr/share/cdbs/1/rules/utils.mk
+
+# Enable motion estimation on amd64, ia64, i386 and powerpc architectures
+#ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), "amd64 ia64 i386 powerpc"))
+#	EXTRA_CONFIGURE_OPTS += --enable-motion_est
+#else
+#	EXTRA_CONFIGURE_OPTS += --disable-motion_est
+#endif
+
+# Enable MMX on amd64 and ia64 architectures
+#ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), "amd64 ia64"))
+#	EXTRA_CONFIGURE_OPTS += --enable-mmx
+#else
+#	EXTRA_CONFIGURE_OPTS += --disable-mmx
+#endif
+
+DEB_CONFIGURE_EXTRA_FLAGS := \
+	--enable-gpl \
+	$(EXTRA_CONFIGURE_OPTS) \
+	--disable-motion_est \
+	--disable-mmx \
+	--avformat-shared=/usr \
+	--avformat-swscale \
+	--luma-compress \
+	--qimage-libdir=/usr/lib
+DEB_DH_INSTALL_SOURCEDIR := debian/tmp
+DEB_INSTALL_MANPAGES_libmlt-dev := debian/mlt-config.1
+
+install/libmlt1::
+	install -D -p -m644 debian/libmlt1.lintian-overrides \
+		debian/libmlt1/usr/share/lintian/overrides/libmlt1
+
