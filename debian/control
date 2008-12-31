@@ -2,7 +2,7 @@ Source: mlt
 Priority: optional
 Maintainer: Fathi Boudra <fabo@debian.org>
 Uploaders: Patrick Matthäi <patrick.matthaei@web.de>
-Build-Depends: cdbs, debhelper (>= 6), quilt, ffmpeg, imagemagick,
+Build-Depends: cdbs, debhelper (>= 6), quilt, ffmpeg (>= 0.svn20081115), imagemagick,
  kdelibs5-dev, ladspa-sdk, libavdevice-dev, libavformat-dev, libdv4-dev,
  libgtk2.0-dev, libjack-dev, libquicktime-dev, libsamplerate-dev,
  libsdl1.2-dev, libsox-dev (>= 14.1.0), libswscale-dev, libvorbis-dev,

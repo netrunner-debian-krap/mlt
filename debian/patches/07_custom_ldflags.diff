@@ -1,7 +1,7 @@
 --- a/configure
 +++ b/configure
-@@ -70,6 +70,7 @@
- 		Linux)
+@@ -76,6 +76,7 @@
+ 		[ "$(uname -m)" = "x86_64" ] && echo "ARCH_X86_64=1" && echo "CFLAGS+=-DARCH_X86_64"
  		echo "OPTIMISATIONS+=-ffast-math"
  		echo "CFLAGS+=-pthread"
 +		echo "LDFLAGS+= -Wl,--no-undefined -Wl,--as-needed"

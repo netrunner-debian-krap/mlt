@@ -7,4 +7,3 @@
 08_add_missing_ldlags.diff
 09_add_gcc4.3_support.diff
 10_fix_xine_module_cflags.diff
-11_add_sox_14.2.0_support.diff

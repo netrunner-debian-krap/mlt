@@ -1,3 +1,18 @@
+mlt (0.3.4-1) UNRELEASED; urgency=low
+
+  UNRELEASED - targeted to experimental
+
+  * New upstream release.
+  * Refresh patches.
+  * Remove 11_add_sox_14.2.0_support.diff patch. Merged upstream.
+  * Update debian/control:
+    - Add version dependency to ffmpeg.
+      We need version 0.svn20081115 from Debian experimental.
+  * Update debian/rules:
+    - Enable motion estimation, MMX and SSE on amd64 architecture.
+
+ -- Fathi Boudra <fabo@debian.org>  Wed, 31 Dec 2008 17:13:39 +0100
+
 mlt (0.3.2-2) unstable; urgency=low
 
   * Add Patrick Matthäi as co-maintainer.

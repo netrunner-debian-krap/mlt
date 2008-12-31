@@ -35,7 +35,7 @@
  include .depend
 --- a/src/modules/avformat/Makefile
 +++ b/src/modules/avformat/Makefile
-@@ -57,12 +57,12 @@
+@@ -69,13 +69,13 @@
  
  install: all
  	install -m 755 $(TARGET) "$(DESTDIR)$(libdir)/mlt"
@@ -45,15 +45,16 @@
 +	install -m 644 producer_avformat.yml "$(DESTDIR)$(libdir)/mlt/avformat"
  
  uninstall:
- 	rm "$(DESTDIR)$(libdir)/mlt/libmltavformat$(LIBSUF)"
--	rm -rf "$(DESTDIR)$(prefix)/share/mlt/avformat" 
-+	rm -rf "$(DESTDIR)$(libdir)/mlt/avformat" 
+ 	rm "$(DESTDIR)$(libdir)/mlt/libmltavformat$(LIBSUF)" 2> /dev/null || true
+ 	rm "$(DESTDIR)$(libdir)/mlt/libmltffmpeg$(LIBSUF)" 2> /dev/null || true
+-	rm -rf "$(DESTDIR)$(prefix)/share/mlt/avformat"
++	rm -rf "$(DESTDIR)$(libdir)/mlt/avformat"
  
  ifneq ($(wildcard .depend),)
  include .depend
 --- a/src/modules/core/Makefile
 +++ b/src/modules/core/Makefile
-@@ -54,7 +54,7 @@
+@@ -55,7 +55,7 @@
  
  install: all
  	install -m 755 $(TARGET) "$(DESTDIR)$(libdir)/mlt"
