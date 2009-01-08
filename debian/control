@@ -64,4 +64,3 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: command line media player and video editor
  Inigo is a powerful multitrack command line oriented video editor.
-

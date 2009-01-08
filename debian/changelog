@@ -19,6 +19,7 @@ mlt (0.3.4-1) UNRELEASED; urgency=low
   * Add debian/watch file.
   * Install the mlt-config.1 manpage about a .manpage file instead of cdbs.
   * Remove not needed .dirs files.
+  * Remove some useless newlines at EOF.
 
  -- Fathi Boudra <fabo@debian.org>  Wed, 31 Dec 2008 17:13:39 +0100
 
