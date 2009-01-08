@@ -17,6 +17,7 @@ mlt (0.3.4-1) UNRELEASED; urgency=low
   * Fix copyright-with-old-dh-make-debian-copyright.
     Thanks lintian.
   * Add debian/watch file.
+  * Install the mlt-config.1 manpage about a .manpage file instead of cdbs.
 
  -- Fathi Boudra <fabo@debian.org>  Wed, 31 Dec 2008 17:13:39 +0100
 
