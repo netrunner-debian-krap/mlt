@@ -11,63 +11,63 @@ Upstream Authors:
 
 Copyright:
 
-    (C) 2002-2007 Ushodaya Enterprises Limited
-    (C) 2002-2007 Charles Yates <charles.yates@pandora.be>
-    (C) 2002-2007 Dan Dennedy <dan@dennedy.org>
+    © 2002-2007 Ushodaya Enterprises Limited
+    © 2002-2007 Charles Yates <charles.yates@pandora.be>
+    © 2002-2007 Dan Dennedy <dan@dennedy.org>
 
 Modules copyrights:
 
     avformat
-    (C) 1997-2001 H. Dietz
-    (C) 1997-2001 R. Fisher
+	© 1997-2001 H. Dietz
+    © 1997-2001 R. Fisher
 
     core
-    (C) 2002 Timothy M. Shead <tshead@k-3d.com>
+    © 2002 Timothy M. Shead <tshead@k-3d.com>
 
     effectv
-    (C) 2007 Stephane Fillod
-    (C) 2001-2006 FUKUCHI Kentaro
+    © 2007 Stephane Fillod
+    © 2001-2006 FUKUCHI Kentaro
 
     gtk2
-    (C) 2000 Red Hat, Inc
-    (C) 2000 Owen Taylor <otaylor@redhat.com>
+    © 2000 Red Hat, Inc
+    © 2000 Owen Taylor <otaylor@redhat.com>
 
     jack rack
-    (C) 2002-2003 Robert Ham <node@users.sourceforge.net>
+    © 2002-2003 Robert Ham <node@users.sourceforge.net>
 
     kdenlive
-    (C) 2007 Jean-Baptiste Mardelle <jb@ader.ch>
-    (C) 2007 Leny Grisel <leny.grisel@laposte.net>
-    (C) 2007 Zachary Drew <zachary.drew@gmail.com>
-    (C) 2003-2005 Daniel Kobras <kobras@debian.org>
+    © 2007 Jean-Baptiste Mardelle <jb@ader.ch>
+    © 2007 Leny Grisel <leny.grisel@laposte.net>
+    © 2007 Zachary Drew <zachary.drew@gmail.com>
+    © 2003-2005 Daniel Kobras <kobras@debian.org>
 
     kino
-    (C) 2000-2002 Arne Schirmacher <arne@schirmacher.de>
+    © 2000-2002 Arne Schirmacher <arne@schirmacher.de>
 
     motion estimation
-    (C) 2004-2005 Zachary Drew <zachary.drew@gmail.com>
+    © 2004-2005 Zachary Drew <zachary.drew@gmail.com>
 
     normalize
-    (C) 1999-2002 Chris Vaill
+    © 1999-2002 Chris Vaill
 
     qimage
-    (C) 2006 Visual Media Fx
+    © 2006 Visual Media Fx
 
     sdl
-    (C) 2005 Visual Media FX
+    © 2005 Visual Media FX
 
     vmfx
-    (C) 2005 Visual Media Fx
+    © 2005 Visual Media Fx
 
     xine
-    (C) 2000-2004 the Xine project
-    (C) 1999-2001 Aaron Holtzman <aholtzma@ess.engr.uvic.ca>
+    © 2000-2004 the Xine project
+    © 1999-2001 Aaron Holtzman <aholtzma@ess.engr.uvic.ca>
 
     oldfilm
-    (C) 2007 Marco Gittler <g.marco@freenet.de>
+    © 2007 Marco Gittler <g.marco@freenet.de>
 
     frei0r
-    (C) 2008 Marco Gittler <g.marco@freenet.de>
+    © 2008 Marco Gittler <g.marco@freenet.de>
 
 MLT and modules license:
 
@@ -95,5 +95,5 @@ oldfilm, frei0r.
 On Debian systems, the complete text of the GNU General Public License v2 or
 later can be found in `/usr/share/common-licenses/GPL'.
 
-The Debian packaging is (C) 2008, Fathi Boudra <fabo@debian.org> and
+The Debian packaging is © 2008, Fathi Boudra <fabo@debian.org> and
 is licensed under the GPL, see `/usr/share/common-licenses/GPL'.
