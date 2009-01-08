@@ -30,6 +30,7 @@ Package: libmlt1
 Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: libmlt-data
 Conflicts: libmlt0.2, libmlt0.2.5
 Replaces: libmlt0.2, libmlt0.2.5
 Description: multimedia framework (runtime)

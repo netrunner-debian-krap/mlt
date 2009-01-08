@@ -1,7 +1,7 @@
 mlt (0.3.4-1) UNRELEASED; urgency=low
 
   UNRELEASED - targeted to experimental
-
+  [ Fathi Boudra ]
   * New upstream release.
   * Refresh patches.
   * Remove 11_add_sox_14.2.0_support.diff patch. Merged upstream.
@@ -10,6 +10,10 @@ mlt (0.3.4-1) UNRELEASED; urgency=low
       We need version 0.svn20081115 from Debian experimental.
   * Update debian/rules:
     - Enable motion estimation, MMX and SSE on amd64 architecture.
+
+  [ Patrick Matthäi ]
+  * Recommend from libmlt1 on libmlt-data, because some apps also need
+    the mlt profiles.
 
  -- Fathi Boudra <fabo@debian.org>  Wed, 31 Dec 2008 17:13:39 +0100
 
