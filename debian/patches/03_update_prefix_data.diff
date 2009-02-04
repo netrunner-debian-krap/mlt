@@ -1,11 +1,11 @@
 --- a/src/framework/mlt_factory.c
 +++ b/src/framework/mlt_factory.c
-@@ -26,7 +26,7 @@
- #include <string.h>
- 
+@@ -30,7 +30,7 @@
+ /** the default subdirectory of the libdir for holding modules (plugins) */
  #define PREFIX_LIB LIBDIR "/mlt"
+ /** the default subdirectory of the install prefix for holding module (plugin) data */
 -#define PREFIX_DATA PREFIX "/share/mlt"
 +#define PREFIX_DATA PREFIX "/lib/mlt"
  
- /** Singleton repositories
- */
+ 
+ /** holds the full path to the modules directory - initialized and retained for the entire session */

@@ -1,18 +1,17 @@
-mlt (0.3.4-1) UNRELEASED; urgency=low
+mlt (0.3.6-1) experimental; urgency=low
 
-  UNRELEASED - targeted to experimental
   [ Fathi Boudra ]
   * New upstream release.
   * Refresh patches.
   * Remove 11_add_sox_14.2.0_support.diff patch. Merged upstream.
   * Update debian/control:
     - Add version dependency to ffmpeg.
-      We need version 0.svn20081115 from Debian experimental.
+      We need version >= 0.svn20081115 from Debian experimental.
   * Update debian/rules:
     - Enable motion estimation, MMX and SSE on amd64 architecture.
 
   [ Patrick Matthäi ]
-  * Recommend from libmlt1 on libmlt-data, because some apps also need
+  * Recommend from libmlt1 on libmlt-data, because some applications also need
     the mlt profiles.
   * Fix copyright-with-old-dh-make-debian-copyright.
     Thanks lintian.
@@ -21,7 +20,7 @@ mlt (0.3.4-1) UNRELEASED; urgency=low
   * Remove not needed .dirs files.
   * Remove some useless newlines at EOF.
 
- -- Fathi Boudra <fabo@debian.org>  Wed, 31 Dec 2008 17:13:39 +0100
+ -- Fathi Boudra <fabo@debian.org>  Wed, 04 Feb 2009 12:07:14 +0100
 
 mlt (0.3.2-2) unstable; urgency=low
 

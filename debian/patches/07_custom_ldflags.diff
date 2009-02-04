@@ -1,6 +1,6 @@
 --- a/configure
 +++ b/configure
-@@ -76,6 +76,7 @@
+@@ -76,6 +76,7 @@ build_config()
  		[ "$(uname -m)" = "x86_64" ] && echo "ARCH_X86_64=1" && echo "CFLAGS+=-DARCH_X86_64"
  		echo "OPTIMISATIONS+=-ffast-math"
  		echo "CFLAGS+=-pthread"

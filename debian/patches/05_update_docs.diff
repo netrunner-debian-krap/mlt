@@ -1,6 +1,6 @@
 --- a/docs/install.txt
 +++ b/docs/install.txt
-@@ -154,7 +154,7 @@
+@@ -154,7 +154,7 @@ Installation
  
  	The modules produce a shared object per module and update text files
  	containing a list of modules provided by this build. These are installed 
@@ -9,7 +9,7 @@
  	install additional support files. 
  	
  	To allow the development of external components, mlt-config and scripts 
-@@ -164,7 +164,7 @@
+@@ -164,7 +164,7 @@ Installation
  	module is loaded unless explicitly requested via server configuration
  	or usage.
  
@@ -20,7 +20,7 @@
  
 --- a/docs/westley.txt
 +++ b/docs/westley.txt
-@@ -15,7 +15,7 @@
+@@ -15,7 +15,7 @@ Preamble:
  
  	If you just want to go straight to the DTD, then see 
  	mlt/src/modules/westley/westley.dtd, which gets installed at 

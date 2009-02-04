@@ -1,6 +1,6 @@
 --- a/Makefile
 +++ b/Makefile
-@@ -2,8 +2,6 @@
+@@ -2,8 +2,6 @@ SUBDIRS = src/framework \
  		  src/inigo \
  		  src/valerie \
  		  src/miracle \

@@ -1,6 +1,6 @@
 --- a/src/miracle/Makefile
 +++ b/src/miracle/Makefile
-@@ -32,7 +32,7 @@
+@@ -32,7 +32,7 @@ OBJS = $(APP_OBJS) $(LIB_OBJS)
  
  CFLAGS += -I.. $(RDYNAMIC)
  
@@ -11,7 +11,7 @@
  
 --- a/src/modules/normalize/Makefile
 +++ b/src/modules/normalize/Makefile
-@@ -7,7 +7,7 @@
+@@ -7,7 +7,7 @@ OBJS = factory.o \
  
  CFLAGS += -I../..
  
@@ -22,7 +22,7 @@
  
 --- a/src/modules/plus/Makefile
 +++ b/src/modules/plus/Makefile
-@@ -11,7 +11,7 @@
+@@ -11,7 +11,7 @@ OBJS = factory.o \
  
  CFLAGS += -I../..
  
@@ -33,7 +33,7 @@
  
 --- a/src/modules/sdl/Makefile
 +++ b/src/modules/sdl/Makefile
-@@ -20,7 +20,7 @@
+@@ -20,7 +20,7 @@ CFLAGS +=-I../.. `sdl-config --cflags`
  
  LDFLAGS +=`sdl-config --libs`
  
@@ -44,7 +44,7 @@
  OBJS += producer_sdl_image.o
 --- a/src/modules/effectv/Makefile
 +++ b/src/modules/effectv/Makefile
-@@ -9,7 +9,7 @@
+@@ -9,7 +9,7 @@ OBJS = factory.o \
  
  CFLAGS += -I../..
  
@@ -55,7 +55,7 @@
  
 --- a/src/modules/dv/Makefile
 +++ b/src/modules/dv/Makefile
-@@ -10,7 +10,7 @@
+@@ -10,7 +10,7 @@ CFLAGS += `pkg-config --cflags libdv` -I
  
  LDFLAGS += `pkg-config --libs libdv`
  
@@ -66,7 +66,7 @@
  
 --- a/src/modules/avformat/Makefile
 +++ b/src/modules/avformat/Makefile
-@@ -29,7 +29,7 @@
+@@ -29,7 +29,7 @@ CFLAGS+=-I../..
  
  LDFLAGS+=-L../../framework
  
@@ -77,7 +77,7 @@
  	CFLAGS+=-DSWSCALE
 --- a/src/modules/jackrack/Makefile
 +++ b/src/modules/jackrack/Makefile
-@@ -21,7 +21,7 @@
+@@ -21,7 +21,7 @@ LDFLAGS += `pkg-config --libs jack`
  LDFLAGS += `xml2-config --libs`
  LDFLAGS += `pkg-config glib-2.0 --libs`
  
@@ -88,7 +88,7 @@
  
 --- a/src/modules/core/Makefile
 +++ b/src/modules/core/Makefile
-@@ -32,7 +32,7 @@
+@@ -32,7 +32,7 @@ ASM_OBJS = 
  
  CFLAGS += -I../..
  
@@ -99,7 +99,7 @@
  
 --- a/src/modules/motion_est/Makefile
 +++ b/src/modules/motion_est/Makefile
-@@ -12,7 +12,7 @@
+@@ -12,7 +12,7 @@ OBJS = factory.o \
  
  CFLAGS += -I../.. 
  

@@ -51,7 +51,7 @@
  	
 --- a/src/modules/gtk2/pixops.c
 +++ b/src/modules/gtk2/pixops.c
-@@ -63,7 +63,7 @@
+@@ -63,7 +63,7 @@ typedef void ( *PixopsPixelFunc ) ( guch
  /* mmx function declarations */
  #if defined(USE_MMX) && !defined(ARCH_X86_64)
  guchar *pixops_scale_line_22_yuv_mmx ( guint32 weights[ 16 ][ 8 ], guchar *p, guchar *q1, guchar *q2, int x_step, guchar *p_stop, int x_init, int destx );
@@ -60,7 +60,7 @@
  #endif
  
  static inline int
-@@ -719,7 +719,7 @@
+@@ -719,7 +719,7 @@ yuv422_scale ( guchar *dest_buf,
  	PixopsLineFunc line_func;
  
  #if defined(USE_MMX) && !defined(ARCH_X86_64)

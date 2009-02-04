@@ -24,7 +24,7 @@
  
 --- a/src/modules/kino/filehandler.cc
 +++ b/src/modules/kino/filehandler.cc
-@@ -23,7 +23,7 @@
+@@ -23,7 +23,7 @@ extern "C" {
  #include <framework/mlt_frame.h>
  }
  
@@ -35,7 +35,7 @@
  #include <iomanip>
 --- a/configure
 +++ b/configure
-@@ -76,7 +76,7 @@
+@@ -76,7 +76,7 @@ build_config()
  		[ "$(uname -m)" = "x86_64" ] && echo "ARCH_X86_64=1" && echo "CFLAGS+=-DARCH_X86_64"
  		echo "OPTIMISATIONS+=-ffast-math"
  		echo "CFLAGS+=-pthread"
