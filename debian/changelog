@@ -1,3 +1,9 @@
+mlt (0.3.6-2) UNRELEASED; urgency=low
+
+  * Uploading to unstable.
+
+ -- Patrick Matthäi <patrick.matthaei@web.de>  Mon, 23 Mar 2009 21:04:06 +0200
+
 mlt (0.3.6-1) experimental; urgency=low
 
   [ Fathi Boudra ]
