@@ -3,6 +3,7 @@ mlt (0.3.6-2) UNRELEASED; urgency=low
   * Uploading to unstable.
   * Fix binary-control-field-duplicates-source.
     Thanks lintian.
+  * Bump Standards-Version to 3.8.1 (no changes needed).
 
  -- Patrick Matthäi <patrick.matthaei@web.de>  Mon, 23 Mar 2009 21:04:06 +0200
 
