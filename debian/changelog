@@ -1,9 +1,11 @@
-mlt (0.3.8-1) UNRELEASED; urgency=low
+mlt (0.3.8-1) unstable; urgency=low
 
   * New upstream release.
+
+  [ Patrick Matthäi ]
   * Change my email address.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 20 Apr 2009 19:31:21 +0200
+ -- Fathi Boudra <fabo@debian.org>  Mon, 20 Apr 2009 20:47:32 +0200
 
 mlt (0.3.6-2) unstable; urgency=low
 

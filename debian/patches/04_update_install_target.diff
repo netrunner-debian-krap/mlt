@@ -54,7 +54,7 @@
  include .depend
 --- a/src/modules/core/Makefile
 +++ b/src/modules/core/Makefile
-@@ -55,7 +55,7 @@ clean:	
+@@ -56,7 +56,7 @@ clean:	
  
  install: all
  	install -m 755 $(TARGET) "$(DESTDIR)$(libdir)/mlt"
@@ -79,7 +79,7 @@
 +	install -m 644 NTSC/*.* $(DESTDIR)$(libdir)/mlt/feeds/NTSC
 --- a/src/framework/Makefile
 +++ b/src/framework/Makefile
-@@ -92,15 +92,15 @@ install:
+@@ -94,15 +94,15 @@ install:
  	ln -sf $(TARGET) $(DESTDIR)$(libdir)/$(NAME)
  	install -d "$(DESTDIR)$(prefix)/include/mlt/framework"
  	install -m 644 $(INCS) "$(DESTDIR)$(prefix)/include/mlt/framework"
