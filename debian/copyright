@@ -86,14 +86,14 @@ MLT and modules license:
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 
 On Debian systems, the complete text of the GNU Lesser General
-Public License can be found in `/usr/share/common-licenses/LGPL'.
+Public License can be found in `/usr/share/common-licenses/LGPL-2'.
 
 The following modules are licensed under the GNU General Public License v2 or
 later: effectv, jackrack, kino, motion_est, normalize, qimage, resample, xine,
 oldfilm, frei0r.
 
 On Debian systems, the complete text of the GNU General Public License v2 or
-later can be found in `/usr/share/common-licenses/GPL'.
+later can be found in `/usr/share/common-licenses/GPL-2'.
 
 The Debian packaging is © 2008, Fathi Boudra <fabo@debian.org> and
-is licensed under the GPL, see `/usr/share/common-licenses/GPL'.
+is licensed under the GPL, see `/usr/share/common-licenses/GPL-2'.
