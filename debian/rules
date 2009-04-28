@@ -20,7 +20,3 @@ DEB_CONFIGURE_EXTRA_FLAGS := \
 	--luma-compress \
 	--qimage-libdir=/usr/lib
 DEB_DH_INSTALL_SOURCEDIR := debian/tmp
-
-install/libmlt1::
-	install -D -p -m644 debian/libmlt1.lintian-overrides \
-		debian/libmlt1/usr/share/lintian/overrides/libmlt1

@@ -4,6 +4,8 @@ mlt (0.3.8-2) UNRELEASED; urgency=low
     Closes: #521740
   * Fix copyright-refers-to-symlink-license. Refer to the {L}GPL-2 file instead
     of the {L}GPL link. Thanks lintian.
+  * Remove old debian/libmlt1.lintian-overrides, the overrides are not needed
+    anymore.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 28 Apr 2009 20:44:48 +0200
 
