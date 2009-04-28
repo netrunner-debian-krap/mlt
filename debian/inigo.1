@@ -1,0 +1,547 @@
+.\"     Title: inigo
+.\"    Author: 
+.\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
+.\"      Date: 03/30/2009
+.\"    Manual: 
+.\"    Source: 
+.\"
+.TH "INIGO" "1" "03/30/2009" "" ""
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+inigo \- multitrack command line oriented video editor
+.SH "SYNOPSIS"
+\fBinigo\fR [\fIoptions\fR] [\fIproducer\fR [\fIname\fR=\fIvalue\fR]*]+
+.sp
+.SH "DESCRIPTION"
+inigo was developed as a test tool for the MLT framework\&. It can be thought of as a powerful, if somewhat obscure, multitrack command line oriented video editor\&.
+.sp
+The following details the usage of the tool and as a result, provides a lot of insight into the workings of the MLT framework\&.
+.sp
+.SH "OPTIONS"
+.PP
+\fB\-attach\fR \fIfilter\fR[:\fIarg\fR] [\fIname\fR=\fIvalue\fR]*
+.RS 4
+Attach a filter to the output
+.RE
+.PP
+\fB\-attach\-cut\fR \fIfilter\fR[:\fIarg\fR] [\fIname\fR=\fIvalue\fR]*
+.RS 4
+Attach a filter to a cut
+.RE
+.PP
+\fB\-attach\-track\fR \fIfilter\fR[:\fIarg\fR] [\fIname\fR=\fIvalue\fR]*
+.RS 4
+Attach a filter to a track
+.RE
+.PP
+\fB\-attach\-clip\fR \fIfilter\fR[:\fIarg\fR] [\fIname\fR=\fIvalue\fR]*
+.RS 4
+Attach a filter to a producer
+.RE
+.PP
+\fB\-audio\-track\fR | \fB\-hide\-video\fR
+.RS 4
+Add an audio\-only track
+.RE
+.PP
+\fB\-blank\fR \fIframes\fR
+.RS 4
+Add blank silence to a track
+.RE
+.PP
+\fB\-consumer\fR \fIid\fR[:\fIarg\fR] [\fIname\fR=\fIvalue\fR]*
+.RS 4
+Set the consumer (sink)
+.RE
+.PP
+\fB\-debug\fR
+.RS 4
+Set the logging level to debug
+.RE
+.PP
+\fB\-filter\fR \fIfilter\fR[:\fIarg\fR] [\fIname\fR=\fIvalue\fR]*
+.RS 4
+Add a filter to the current track
+.RE
+.PP
+\fB\-group\fR [\fIname\fR=\fIvalue\fR]*
+.RS 4
+Apply properties repeatedly
+.RE
+.PP
+\fB\-help\fR
+.RS 4
+Show this message
+.RE
+.PP
+\fB\-join\fR \fIclips\fR
+.RS 4
+Join multiple clips into one cut
+.RE
+.PP
+\fB\-mix\fR \fIlength\fR
+.RS 4
+Add a mix between the last two cuts
+.RE
+.PP
+\fB\-mixer\fR \fItransition\fR
+.RS 4
+Add a transition to the mix
+.RE
+.PP
+\fB\-null\-track\fR | \fB\-hide\-track\fR
+.RS 4
+Add a hidden track
+.RE
+.PP
+\fB\-profile\fR \fIname\fR
+.RS 4
+Set the processing settings
+.RE
+.PP
+\fB\-progress\fR
+.RS 4
+Display progress along with the position
+.RE
+.PP
+\fB\-remove\fR
+.RS 4
+Remove the most recent cut
+.RE
+.PP
+\fB\-repeat\fR \fItimes\fR
+.RS 4
+Repeat the last cut
+.RE
+.PP
+\fB\-query\fR
+.RS 4
+List all of the registered services
+.RE
+.PP
+\fB\-query\fR consumers | consumer=\fIid\fR
+.RS 4
+List consumers or show info about one
+.RE
+.PP
+\fB\-query\fR filters | filter=\fIid\fR
+.RS 4
+List filters or show info about one
+.RE
+.PP
+\fB\-query\fR producers | producer=\fIid\fR
+.RS 4
+List producers or show info about one
+.RE
+.PP
+\fB\-query\fR transitions | transition=\fIid\fR
+.RS 4
+List transitions or show info about one
+.RE
+.PP
+\fB\-serialise\fR [\fIfilename\fR]
+.RS 4
+Write the commands to a text file
+.RE
+.PP
+\fB\-silent\fR
+.RS 4
+Do not display position/transport help
+.RE
+.PP
+\fB\-split\fR \fIrelative\-frame\fR
+.RS 4
+Split the last cut into two cuts
+.RE
+.PP
+\fB\-swap\fR
+.RS 4
+Rearrange the last two cuts
+.RE
+.PP
+\fB\-track\fR
+.RS 4
+Add a track
+.RE
+.PP
+\fB\-transition\fR \fIid\fR[:\fIarg\fR] [\fIname\fR=\fIvalue\fR]*
+.RS 4
+Add a transition
+.RE
+.PP
+\fB\-verbose\fR
+.RS 4
+Set the logging level to verbose
+.RE
+.PP
+\fB\-version\fR
+.RS 4
+Show the version and copyright message
+.RE
+.PP
+\fB\-video\-track\fR | \fB\-hide\-audio\fR
+.RS 4
+Add a video\-only track
+.RE
+.SH "GENERAL RULES"
+.sp
+.RS 4
+\h'-04' 1.\h'+02'Order is incredibly important;
+.RE
+.sp
+.RS 4
+\h'-04' 2.\h'+02'Error checking on command line parsing is weak;
+.RE
+.sp
+.RS 4
+\h'-04' 3.\h'+02'Please refer to services\&.txt for details on services available;
+.RE
+.sp
+.RS 4
+\h'-04' 4.\h'+02'The MLT framework, from which inigo has inherited its naming convention, is very mlt\-centric\&. Producers produce MLT frame objects and consumers consume MLT frame objects\&. The distinction is important \- a DV producer does not produce DV, it produces MLT frames from a DV source, and similarly a DV consumer does not consume DV, it consumes MLT frames and produces DV frames\&.
+.RE
+.SH "TERMINOLOGY"
+\fIProducers\fR typically refer to files but may also indicate devices (such as dv1394 input or video4linux)\&. Hence, the more generic term is used [the more generic usage is out of scope for now\&...]\&.
+.sp
+\fIFilters\fR are frame modifiers \- they always guarantee that for every frame they receive, they output \fBprecisely\fR one frame\&. Never more, never less, ever\&. Nothing says that a filter cannot generate frames though
+.sp
+\fITransitions\fR collect frames from two tracks (a and b) and output 1 modified frame on their \'a track\', and 1 unmodified frame on their \'b track\'\&. Never more, never less, ever\&.
+.sp
+\fIConsumers\fR collect frames from a producer, do something with them and destroy them\&.
+.sp
+Collectively, these are known as \fIservices\fR\&.
+.sp
+All services have \fIproperties\fR associated to them\&. These are typically defaulted or evaluated and may be overriden on a case by case basis\&.
+.sp
+All services except consumers obey in and out properties\&.
+.sp
+Consumers have no say in the flow of frames [though they may give the illusion that they do]\&. They get frames from a connected producer, use them, destroy them and get more\&.
+.sp
+.SH "BASICS"
+To play a file with the default SDL PAL consumer, usage is:
+.sp
+.RS 4
+.nf
+$ inigo file
+.fi
+.sp
+.RE
+Note that \fIfile\fR can be anything that inigo has a known \fIproducer\fR mapping for (so this can be anything from \&.dv to \&.txt)\&.
+.sp
+You can also specify the producer directly, for example:
+.sp
+.RS 4
+.nf
+$ inigo avformat:file\&.mpeg
+.fi
+.RE
+Would force the direct use of avformat for loading the file\&.
+.sp
+.SH "PROPERTIES"
+Properties can be assigned to the producer by adding additional name=value pairs after the producer\e:
+.sp
+.RS 4
+.nf
+$ inigo file in=50 out=100 something="something else"
+.fi
+.sp
+.RE
+Note that while some properties have meaning to all producers (for example: in, out and length are guaranteed to be valid for all, though typically, length is determined automatically), the validity of others are dependent on the producer \- however, properties will always be assigned and silently ignored if they won\'t be used\&.
+.sp
+.SH "MULTIPLE FILES"
+Multiple files of different types can be used:
+.sp
+.RS 4
+.nf
+$ inigo a\&.dv b\&.mpg c\&.png
+.fi
+.sp
+.RE
+Properties can be assigned to each file:
+.sp
+.RS 4
+.nf
+$ inigo a\&.dv in=50 out=100 b\&.mpg out=500 c\&.png out=500
+.fi
+.sp
+.RE
+MLT will take care of \fInormalising\fR the output of a producer to ensure that the consumer gets what it needs\&. So, in the case above, the mlt framework will ensure that images are rescaled and audio resampled to meet the requirements of your configuration (which, by default, will be PAL)\&. See \fIAppendix A: Normalisation Rules\fR below\&.
+.sp
+.SH "FILTERS"
+Filters are frame modifiers \- they can change the contents of the audio or the images associated to a frame\&.
+.sp
+.RS 4
+.nf
+$ inigo a\&.dv \-filter greyscale
+.fi
+.sp
+.RE
+As with producers, properties may be specified on filters too\&.
+.sp
+Again, in and out properties are common to all, so to apply a filter to a range of frames, you would use something like:
+.sp
+.RS 4
+.nf
+$ inigo a\&.dv \-filter greyscale in=0 out=50
+.fi
+.sp
+.RE
+Again, filters have their own set of rules about properties and will silently ignore properties that do not apply\&.
+.sp
+.SH "GROUPS"
+The \-group switch is provided to force default properties on the following \fIservices\fR\&. For example:
+.sp
+.RS 4
+.nf
+$ inigo \-group in=0 out=49 clip*
+.fi
+.sp
+.RE
+would play the first 50 frames of all clips that match the wild card pattern\&.
+.sp
+Note that the last \-group settings also apply to the following filters, transitions and consumers, so:
+.sp
+.RS 4
+.nf
+$ inigo \-group in=0 out=49 clip* \-filter greyscale
+.fi
+.sp
+.RE
+is \fBprobably not\fR what you want (ie: the greyscale filter would only be applied to the first 50 frames)\&.
+.sp
+To shed the group properties, you can use any empty group:
+.sp
+.RS 4
+.nf
+$ inigo \-group in=0 out=49 clip* \-group \-filter greyscale
+.fi
+.sp
+.RE
+.SH "ATTACHED FILTERS"
+As described above, the \-filter switch applies filters to an entire track\&. To localise filters to a specific clip on a track, you have to know information about the lengths of the clip and all clips leading up to it\&. In practise, this is horrifically impractical, especially at a command line level (and not even that practical from a programing point of view\&...)\&.
+.sp
+The \-attach family of switches simplify things enormously\&. By default, \-attach will attach a filter to the last service created, so:
+.sp
+.RS 4
+.nf
+$ inigo clip1\&.dv clip2\&.dv \-attach greyscale clip3\&.dv
+.fi
+.sp
+.RE
+would only apply the filter to clip2\&.dv\&. You can further narrow down the area of the effect by specifying in/out points on the attached filter\&.
+.sp
+This might seem simple so far, but there is a catch\&... consider the following:
+.sp
+.RS 4
+.nf
+$ ingo clip1\&.dv \-attach watermark:+hello\&.txt \-attach invert
+.fi
+.sp
+.RE
+The second attached filter is actually attached to the watermark\&. You might think, yay, nice (and it is :\-)), but, it might not be what you want\&. For example you might want to attach both to clip1\&.dv\&. To do that, you can use:
+.sp
+.RS 4
+.nf
+$ ingo clip1\&.dv \-attach\-cut watermark:+hello\&.txt \-attach\-cut invert
+.fi
+.sp
+.RE
+As you shall see below, there are still another couple of gotchas associated to \-attach, and even another variant :\-)\&.
+.sp
+Mixes:
+.sp
+The \-mix switch provides the simplest means to introducer transitions between adjacent clips\&.
+.sp
+For example:
+.sp
+.RS 4
+.nf
+$ inigo clip1\&.dv clip2\&.dv \-mix 25 \-mixer luma \-mixer mix:\-1
+.fi
+.sp
+.RE
+would provide both an audio and video transition between clip1 and clip2\&.
+.sp
+This functionality supercedes the enforced use of the \-track and \-transtition switches from earlier versions of inigo and makes life a lot easier :\-)\&.
+.sp
+These can be used in combination, so you can for example do a fade from black and to black using the following:
+.sp
+.RS 4
+.nf
+$ inigo colour:black out=24 clip1\&.dv \-mix 25 \-mixer luma \e
+        colour:black out=24 \-mix 25 \-mixer luma
+.fi
+.sp
+.RE
+while this may not be immediately obvious, consider what\'s happening as the command line is being parsed from left to right:
+.sp
+.RS 4
+.nf
+Input:                  Track
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+colour:black out=24     [black]
+clip1\&.dv                [black][clip1\&.dv]
+\-mix 25                 [black+clip1\&.dv][clip1\&.dv]
+\-mixer luma             [luma:black+clip1\&.dv][clip1\&.dv]
+colour:black out=24     [luma:black+clip1\&.dv][clip1\&.dv][black]
+\-mix 25                 [luma:black+clip1\&.dv][clip1\&.dv][clip1\&.dv+black]
+\-mixer luma             [luma:black+clip1\&.dv][clip1\&.dv][luma:clip1\&.dv+black]
+.fi
+.sp
+.RE
+Obviously, the clip1\&.dv instances refer to different parts of the clip, but hopefully that will demonstrate what happens as we construct the track\&.
+.sp
+You will find more details on the mix in the framework\&.txt\&.
+.sp
+.SH "MIX AND ATTACH"
+As noted, \-attach normally applies to the last created service \- so, you can attach a filter to the transition region using:
+.sp
+.RS 4
+.nf
+$ inigo clip1\&.dv clip2\&.dv \-mix 25 \-mixer luma \-attach watermark:+Transition\&.txt
+.fi
+.sp
+.RE
+Again, nice, but take care \- if you want the attached filter to be associated to the region following the transition, use \-attach\-cut instead\&.
+.sp
+.SH "SPLITS, JOINS, REMOVES AND SWAPS"
+COMPLEX \- needs simplification\&...\&.
+.sp
+.SH "INTRODUCING TRACKS AND BLANKS"
+So far, all of the examples have shown the definition of a single playlist, or more accurately, track\&.
+.sp
+When multiple tracks exist, the consumer will receive a frame from the \fIhighest numbered\fR track that is generating a non\-blank frame\&.
+.sp
+It is best to visualise a track arrangement, so we\'ll start with an example:
+.sp
+$ inigo a\&.dv \-track b\&.dv in=0 out=49
+.sp
+This can be visualised as follows:
+.sp
+.RS 4
+.nf
++\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-+
+|a                 |
++\-\-\-\-\-\-\-+\-\-\-\-\-\-\-\-\-\-+
+|b      |
++\-\-\-\-\-\-\-+
+.fi
+.sp
+.RE
+Playout will show the first 50 frames of b and the 51st frame shown will be the 51st frame of a\&.
+.sp
+This rule also applies to audio only producers on the second track, for example, the following would show the video from the a track, but the audio would come from the second track:
+.sp
+.RS 4
+.nf
+$ inigo a\&.dv \-track b\&.mp3 in=0 out=49
+.fi
+.sp
+.RE
+To have the 51st frame be the first frame of b, we can use the \-blank switch:
+.sp
+.RS 4
+.nf
+$ inigo a\&.dv out=49 \-track \-blank 49 b\&.dv
+.fi
+.sp
+.RE
+Which we can visualise as:
+.sp
+.RS 4
+.nf
++\-\-\-\-\-\-\-+
+|a      |
++\-\-\-\-\-\-\-+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-+
+        |b                  |
+        +\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-+
+.fi
+.sp
+.RE
+Now playout will continue as though a and b clips are on the same track (which on its own, is about as useful as reversing the process of slicing bread)\&.
+.sp
+.SH "TRANSITIONS"
+Where tracks become useful is in the placing of transitions\&.
+.sp
+Here we need tracks to overlap, so a useful multitrack definition could be given as:
+.sp
+.RS 4
+.nf
+$ inigo a\&.dv out=49 \e
+        \-track \e
+        \-blank 24 b\&.dv \e
+        \-transition luma in=25 out=49 a_track=0 b_track=1
+.fi
+.sp
+.RE
+Now we\'re cooking \- our visualisation would be something like:
+.sp
+.RS 4
+.nf
++\-\-\-\-\-\-\-+
+|a      |
++\-\-\-+\-\-\-+\-\-\-\-\-\-\-\-\-\-\-\-\-\-+
+    |b                 |
+    +\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-+
+.fi
+.sp
+.RE
+Playout will now show the first 25 frames of a and then a fade transition for 25 frames between a and b, and will finally playout the remainder of b\&.
+.sp
+.SH "REVERSING A TRANSITION"
+When we visualise a track definition, we also see situtations like:
+.sp
+.RS 4
+.nf
++\-\-\-\-\-\-\-+              +\-\-\-\-\-\-\-\-\-\-+
+|a1     |              |a2        |
++\-\-\-+\-\-\-+\-\-\-\-\-\-\-\-\-\-\-\-\-\-+\-\-\-\-+\-\-\-\-\-+
+    |b                      |
+    +\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-+
+.fi
+.sp
+.RE
+In this case, we have two transitions, a1 to b and b to a2\&.
+.sp
+In this scenario, we define a command line as follows:
+.sp
+.RS 4
+.nf
+$ inigo a\&.dv out=49 \-blank 49 a2\&.dv \e
+        \-track \e
+        \-blank 24 b\&.dv out=99 \e
+        \-transition luma in=25 out=49 a_track=0 b_track=1 \e
+        \-transition luma in=100 out=124 reverse=1 a_track=0 b_track=1
+.fi
+.sp
+.RE
+.SH "SERIALISATION"
+Inigo has a built in serialisation mechanism \- you can build up your command, test it via any consumer and then add a \-serialise file\&.inigo switch to save it\&.
+.sp
+The saved file can be subsequently used as a clip by either miracle or inigo\&. Take care though \- paths to files are saved as provided on the command line\&...\&.
+.sp
+A more expressive serialisation can be obtained with the westley consumer \- this will provide an xml document which can be used freely in inigo and miracle\&.
+.sp
+See westley\&.txt for more information\&.
+.sp
+.SH "MISSING FEATURES"
+Some filters/transitions should be applied on the output frame regardless of which track it comes from \- for example, you might have a 3rd text track or a watermark which you want composited on every frame, and of course, there\'s the obscure filter\&...\&.
+.sp
+inigo only supports this in two invocations \- as a simple example:
+.sp
+.RS 4
+.nf
+$ inigo a\&.dv \-track \-blank 100 b\&.dv \-consumer westley:basic\&.westley
+$ inigo basic\&.westley \-filter watermark:watermark\&.png
+.fi
+.sp
+.RE
+.SH "AUTHOR"
+Charles Yates <charles\&.yates@pandora\&.be>
+.sp
+.SH "COPYING"
+Copyright (C) 2004 Ushodaya Enterprised Limited
+.RE
