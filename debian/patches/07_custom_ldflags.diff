@@ -1,3 +1,5 @@
+# Add "-Wl,--no-undefined -Wl,--as-needed" to the LDFLAGS.
+
 --- a/configure
 +++ b/configure
 @@ -76,6 +76,7 @@ build_config()

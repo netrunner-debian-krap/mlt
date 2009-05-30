@@ -1,22 +1,22 @@
-.\"     Title: inigo
+.\"     Title: melt
 .\"    Author: 
 .\" Generator: DocBook XSL Stylesheets v1.73.2 <http://docbook.sf.net/>
 .\"      Date: 03/30/2009
 .\"    Manual: 
 .\"    Source: 
 .\"
-.TH "INIGO" "1" "03/30/2009" "" ""
+.TH "MELT" "1" "03/30/2009" "" ""
 .\" disable hyphenation
 .nh
 .\" disable justification (adjust text to left margin only)
 .ad l
 .SH "NAME"
-inigo \- multitrack command line oriented video editor
+melt \- multitrack command line oriented video editor
 .SH "SYNOPSIS"
-\fBinigo\fR [\fIoptions\fR] [\fIproducer\fR [\fIname\fR=\fIvalue\fR]*]+
+\fBmelt\fR [\fIoptions\fR] [\fIproducer\fR [\fIname\fR=\fIvalue\fR]*]+
 .sp
 .SH "DESCRIPTION"
-inigo was developed as a test tool for the MLT framework\&. It can be thought of as a powerful, if somewhat obscure, multitrack command line oriented video editor\&.
+melt was developed as a test tool for the MLT framework\&. It can be thought of as a powerful, if somewhat obscure, multitrack command line oriented video editor\&.
 .sp
 The following details the usage of the tool and as a result, provides a lot of insight into the workings of the MLT framework\&.
 .sp
@@ -201,7 +201,7 @@ Add a video\-only track
 .RE
 .sp
 .RS 4
-\h'-04' 4.\h'+02'The MLT framework, from which inigo has inherited its naming convention, is very mlt\-centric\&. Producers produce MLT frame objects and consumers consume MLT frame objects\&. The distinction is important \- a DV producer does not produce DV, it produces MLT frames from a DV source, and similarly a DV consumer does not consume DV, it consumes MLT frames and produces DV frames\&.
+\h'-04' 4.\h'+02'The MLT framework, from which melt has inherited its naming convention, is very mlt\-centric\&. Producers produce MLT frame objects and consumers consume MLT frame objects\&. The distinction is important \- a DV producer does not produce DV, it produces MLT frames from a DV source, and similarly a DV consumer does not consume DV, it consumes MLT frames and produces DV frames\&.
 .RE
 .SH "TERMINOLOGY"
 \fIProducers\fR typically refer to files but may also indicate devices (such as dv1394 input or video4linux)\&. Hence, the more generic term is used [the more generic usage is out of scope for now\&...]\&.
@@ -225,17 +225,17 @@ To play a file with the default SDL PAL consumer, usage is:
 .sp
 .RS 4
 .nf
-$ inigo file
+$ melt file
 .fi
 .sp
 .RE
-Note that \fIfile\fR can be anything that inigo has a known \fIproducer\fR mapping for (so this can be anything from \&.dv to \&.txt)\&.
+Note that \fIfile\fR can be anything that melt has a known \fIproducer\fR mapping for (so this can be anything from \&.dv to \&.txt)\&.
 .sp
 You can also specify the producer directly, for example:
 .sp
 .RS 4
 .nf
-$ inigo avformat:file\&.mpeg
+$ melt avformat:file\&.mpeg
 .fi
 .RE
 Would force the direct use of avformat for loading the file\&.
@@ -245,7 +245,7 @@ Properties can be assigned to the producer by adding additional name=value pairs
 .sp
 .RS 4
 .nf
-$ inigo file in=50 out=100 something="something else"
+$ melt file in=50 out=100 something="something else"
 .fi
 .sp
 .RE
@@ -256,7 +256,7 @@ Multiple files of different types can be used:
 .sp
 .RS 4
 .nf
-$ inigo a\&.dv b\&.mpg c\&.png
+$ melt a\&.dv b\&.mpg c\&.png
 .fi
 .sp
 .RE
@@ -264,7 +264,7 @@ Properties can be assigned to each file:
 .sp
 .RS 4
 .nf
-$ inigo a\&.dv in=50 out=100 b\&.mpg out=500 c\&.png out=500
+$ melt a\&.dv in=50 out=100 b\&.mpg out=500 c\&.png out=500
 .fi
 .sp
 .RE
@@ -275,7 +275,7 @@ Filters are frame modifiers \- they can change the contents of the audio or the 
 .sp
 .RS 4
 .nf
-$ inigo a\&.dv \-filter greyscale
+$ melt a\&.dv \-filter greyscale
 .fi
 .sp
 .RE
@@ -285,7 +285,7 @@ Again, in and out properties are common to all, so to apply a filter to a range 
 .sp
 .RS 4
 .nf
-$ inigo a\&.dv \-filter greyscale in=0 out=50
+$ melt a\&.dv \-filter greyscale in=0 out=50
 .fi
 .sp
 .RE
@@ -296,7 +296,7 @@ The \-group switch is provided to force default properties on the following \fIs
 .sp
 .RS 4
 .nf
-$ inigo \-group in=0 out=49 clip*
+$ melt \-group in=0 out=49 clip*
 .fi
 .sp
 .RE
@@ -306,7 +306,7 @@ Note that the last \-group settings also apply to the following filters, transit
 .sp
 .RS 4
 .nf
-$ inigo \-group in=0 out=49 clip* \-filter greyscale
+$ melt \-group in=0 out=49 clip* \-filter greyscale
 .fi
 .sp
 .RE
@@ -316,7 +316,7 @@ To shed the group properties, you can use any empty group:
 .sp
 .RS 4
 .nf
-$ inigo \-group in=0 out=49 clip* \-group \-filter greyscale
+$ melt \-group in=0 out=49 clip* \-group \-filter greyscale
 .fi
 .sp
 .RE
@@ -327,7 +327,7 @@ The \-attach family of switches simplify things enormously\&. By default, \-atta
 .sp
 .RS 4
 .nf
-$ inigo clip1\&.dv clip2\&.dv \-attach greyscale clip3\&.dv
+$ melt clip1\&.dv clip2\&.dv \-attach greyscale clip3\&.dv
 .fi
 .sp
 .RE
@@ -359,19 +359,19 @@ For example:
 .sp
 .RS 4
 .nf
-$ inigo clip1\&.dv clip2\&.dv \-mix 25 \-mixer luma \-mixer mix:\-1
+$ melt clip1\&.dv clip2\&.dv \-mix 25 \-mixer luma \-mixer mix:\-1
 .fi
 .sp
 .RE
 would provide both an audio and video transition between clip1 and clip2\&.
 .sp
-This functionality supercedes the enforced use of the \-track and \-transtition switches from earlier versions of inigo and makes life a lot easier :\-)\&.
+This functionality supercedes the enforced use of the \-track and \-transtition switches from earlier versions of melt and makes life a lot easier :\-)\&.
 .sp
 These can be used in combination, so you can for example do a fade from black and to black using the following:
 .sp
 .RS 4
 .nf
-$ inigo colour:black out=24 clip1\&.dv \-mix 25 \-mixer luma \e
+$ melt colour:black out=24 clip1\&.dv \-mix 25 \-mixer luma \e
         colour:black out=24 \-mix 25 \-mixer luma
 .fi
 .sp
@@ -401,7 +401,7 @@ As noted, \-attach normally applies to the last created service \- so, you can a
 .sp
 .RS 4
 .nf
-$ inigo clip1\&.dv clip2\&.dv \-mix 25 \-mixer luma \-attach watermark:+Transition\&.txt
+$ melt clip1\&.dv clip2\&.dv \-mix 25 \-mixer luma \-attach watermark:+Transition\&.txt
 .fi
 .sp
 .RE
@@ -417,7 +417,7 @@ When multiple tracks exist, the consumer will receive a frame from the \fIhighes
 .sp
 It is best to visualise a track arrangement, so we\'ll start with an example:
 .sp
-$ inigo a\&.dv \-track b\&.dv in=0 out=49
+$ melt a\&.dv \-track b\&.dv in=0 out=49
 .sp
 This can be visualised as follows:
 .sp
@@ -437,7 +437,7 @@ This rule also applies to audio only producers on the second track, for example,
 .sp
 .RS 4
 .nf
-$ inigo a\&.dv \-track b\&.mp3 in=0 out=49
+$ melt a\&.dv \-track b\&.mp3 in=0 out=49
 .fi
 .sp
 .RE
@@ -445,7 +445,7 @@ To have the 51st frame be the first frame of b, we can use the \-blank switch:
 .sp
 .RS 4
 .nf
-$ inigo a\&.dv out=49 \-track \-blank 49 b\&.dv
+$ melt a\&.dv out=49 \-track \-blank 49 b\&.dv
 .fi
 .sp
 .RE
@@ -470,7 +470,7 @@ Here we need tracks to overlap, so a useful multitrack definition could be given
 .sp
 .RS 4
 .nf
-$ inigo a\&.dv out=49 \e
+$ melt a\&.dv out=49 \e
         \-track \e
         \-blank 24 b\&.dv \e
         \-transition luma in=25 out=49 a_track=0 b_track=1
@@ -510,7 +510,7 @@ In this scenario, we define a command line as follows:
 .sp
 .RS 4
 .nf
-$ inigo a\&.dv out=49 \-blank 49 a2\&.dv \e
+$ melt a\&.dv out=49 \-blank 49 a2\&.dv \e
         \-track \e
         \-blank 24 b\&.dv out=99 \e
         \-transition luma in=25 out=49 a_track=0 b_track=1 \e
@@ -519,23 +519,23 @@ $ inigo a\&.dv out=49 \-blank 49 a2\&.dv \e
 .sp
 .RE
 .SH "SERIALISATION"
-Inigo has a built in serialisation mechanism \- you can build up your command, test it via any consumer and then add a \-serialise file\&.inigo switch to save it\&.
+Inigo has a built in serialisation mechanism \- you can build up your command, test it via any consumer and then add a \-serialise file\&.melt switch to save it\&.
 .sp
-The saved file can be subsequently used as a clip by either miracle or inigo\&. Take care though \- paths to files are saved as provided on the command line\&...\&.
+The saved file can be subsequently used as a clip by either miracle or melt\&. Take care though \- paths to files are saved as provided on the command line\&...\&.
 .sp
-A more expressive serialisation can be obtained with the westley consumer \- this will provide an xml document which can be used freely in inigo and miracle\&.
+A more expressive serialisation can be obtained with the westley consumer \- this will provide an xml document which can be used freely in melt and miracle\&.
 .sp
 See westley\&.txt for more information\&.
 .sp
 .SH "MISSING FEATURES"
 Some filters/transitions should be applied on the output frame regardless of which track it comes from \- for example, you might have a 3rd text track or a watermark which you want composited on every frame, and of course, there\'s the obscure filter\&...\&.
 .sp
-inigo only supports this in two invocations \- as a simple example:
+melt only supports this in two invocations \- as a simple example:
 .sp
 .RS 4
 .nf
-$ inigo a\&.dv \-track \-blank 100 b\&.dv \-consumer westley:basic\&.westley
-$ inigo basic\&.westley \-filter watermark:watermark\&.png
+$ melt a\&.dv \-track \-blank 100 b\&.dv \-consumer westley:basic\&.westley
+$ melt basic\&.westley \-filter watermark:watermark\&.png
 .fi
 .sp
 .RE

@@ -1,3 +1,19 @@
+mlt (0.4.0-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+    - inigo has been renamed to melt.
+    - mlt++ is not anymore a separate source package, also build and install
+      mlt++ in mlt.
+    - Bump libmlt++ SONAME to 2.
+    - miracle, westley and valerie have gone.
+    - mlt-config is deprecated.
+    - Drop 02_update_have_mmx, 04_update_install_target, 05_update_docs,
+      06_disable_example and 08_add_missing_ldlags patches.
+  * Add missing descriptions to the patches. Fixes lintian warning
+    quilt-patch-missing-description. Thanks lintian.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 30 May 2009 16:41:21 +0200
+
 mlt (0.3.8-2) unstable; urgency=low
 
   * Add manpage for inigo. Much thanks to Tatsuki Sugiura for his patch.

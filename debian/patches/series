@@ -1,9 +1,4 @@
-02_update_have_mmx.diff
 03_update_prefix_data.diff
-04_update_install_target.diff
-05_update_docs.diff
-06_disable_example.diff
 07_custom_ldflags.diff
-08_add_missing_ldlags.diff
 09_add_gcc4.3_support.diff
 10_fix_xine_module_cflags.diff

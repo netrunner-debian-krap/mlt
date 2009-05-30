@@ -1,5 +1,1 @@
-usr/share/mlt/lumas/NTSC/luma*.pgm.png
-usr/share/mlt/lumas/PAL/luma*.pgm.png
-usr/share/mlt/oldfilm/*.svg
-usr/share/mlt/oldfilm/*.yml
-usr/share/mlt/profiles
+usr/share/mlt/*

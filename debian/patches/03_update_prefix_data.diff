@@ -1,3 +1,5 @@
+# Change the default position of the data prefix to /lib/mlt/.
+
 --- a/src/framework/mlt_factory.c
 +++ b/src/framework/mlt_factory.c
 @@ -30,7 +30,7 @@

@@ -1,3 +1,5 @@
+# Fix the CFLAGS for the xine modules.
+
 --- a/src/modules/xine/Makefile
 +++ b/src/modules/xine/Makefile
 @@ -10,7 +10,7 @@ ifdef MMX_FLAGS

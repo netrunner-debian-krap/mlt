@@ -1,3 +1,5 @@
+# Add support for gcc >= 4.3.
+
 --- a/src/modules/kino/kino_wrapper.cc
 +++ b/src/modules/kino/kino_wrapper.cc
 @@ -20,8 +20,8 @@
