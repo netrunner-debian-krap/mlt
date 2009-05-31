@@ -1,10 +1,5 @@
 #!/usr/bin/make -f
 
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/autotools.mk
-include /usr/share/cdbs/1/rules/patchsys-quilt.mk
-include /usr/share/cdbs/1/rules/utils.mk
-
 # Enable motion estimation, MMX and SSE on amd64 architecture
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), "amd64"))
 	EXTRA_CONFIGURE_OPTS += --enable-motion_est --enable-mmx --enable-sse
@@ -19,4 +14,10 @@ DEB_CONFIGURE_EXTRA_FLAGS := \
 	--avformat-swscale \
 	--luma-compress \
 	--qimage-libdir=/usr/lib
-DEB_DH_INSTALL_SOURCEDIR := debian/tmp
+
+%:
+	dh --with quilt $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(DEB_CONFIGURE_EXTRA_FLAGS)
+

@@ -9,5 +9,5 @@
 -CFLAGS += -I../../ -DARCH_X86
 +CFLAGS += -I../../
  
- LDFLAGS+=-L../../framework -lmlt
+ LDFLAGS += -L../../framework -lmlt
  
