@@ -77,7 +77,6 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Conflicts: libmlt++0.2, libmlt++1
 Replaces: libmlt++0.2, libmlt++1
-Provides: libmlt++0.2, libmlt++1
 Description: MLT multimedia framework C++ wrapper (runtime)
  MLT is an open source multimedia framework, designed and developed for
  television broadcasting. It provides a toolkit for broadcasters, video
