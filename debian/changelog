@@ -9,6 +9,8 @@ mlt (0.4.2-1) UNRELEASED; urgency=low
     - mlt-config is deprecated.
     - Drop 02_update_have_mmx, 04_update_install_target, 05_update_docs,
       06_disable_example and 08_add_missing_ldlags patches.
+    - Drop 03_update_prefix_data patch, it is not needed anymore and will break
+      melt.
   * Add missing descriptions to the patches. Fixes lintian warning
     quilt-patch-missing-description. Thanks lintian.
 
