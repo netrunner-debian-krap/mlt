@@ -1,4 +1,4 @@
-mlt (0.4.2-1) UNRELEASED; urgency=low
+mlt (0.4.0-1) UNRELEASED; urgency=low
 
   * New upstream release.
     - inigo has been renamed to melt.
