@@ -13,6 +13,7 @@ mlt (0.4.0-1) UNRELEASED; urgency=low
       melt.
   * Add missing descriptions to the patches. Fixes lintian warning
     quilt-patch-missing-description. Thanks lintian.
+  * Bump compat/debhelper to 7 (no changes needed).
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 30 May 2009 16:41:21 +0200
 
