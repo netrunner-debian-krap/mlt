@@ -1,3 +1,5 @@
+01_remove_ldconfig.diff
+02_update_have_mmx.diff
 07_custom_ldflags.diff
 09_add_gcc4.3_support.diff
 10_fix_xine_module_cflags.diff

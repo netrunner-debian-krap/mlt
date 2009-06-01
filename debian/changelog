@@ -1,18 +1,20 @@
-mlt (0.4.2-1) UNRELEASED; urgency=low
+mlt (0.4.2-1) unstable; urgency=low
 
   * New upstream release.
     - inigo has been renamed to melt.
-    - mlt++ is not anymore a separate source package, also build and install
-      mlt++ in mlt.
-    - Bump libmlt++ SONAME to 2.
-    - miracle, westley and valerie have gone.
+    - build and install mlt++ in mlt, they are not a separate source package
+      anymore.
+    - Bump libmlt++ SONAME to 2 (introduce libmlt++2 package).
+    - miracle, westley and valerie were moved out of mlt into melted project.
     - mlt-config is deprecated.
-    - Drop 02_update_have_mmx, 04_update_install_target, 05_update_docs,
-      06_disable_example and 08_add_missing_ldlags patches.
-    - Drop 03_update_prefix_data patch, it is not needed anymore and will break
-      melt.
-  * Add missing descriptions to the patches. Fixes lintian warning
-    quilt-patch-missing-description. Thanks lintian.
+    - Drop patches:
+      - 03_update_prefix_data patch (not needed anymore and will break melt)
+      - 04_update_install_target
+      - 05_update_docs
+      - 06_disable_example
+      - 08_add_missing_ldlags
+  * Fix lintian warning quilt-patch-missing-description:
+    add missing descriptions to the patches. Thanks lintian.
   * Bump compat/debhelper to 7 (no changes needed).
   * Drop cdbs build dependency.
 
