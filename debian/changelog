@@ -1,3 +1,10 @@
+mlt (0.4.2-2) unstable; urgency=low
+
+  * Add frei0r-plugins-dev as build-dependency, so that the frei0r plugin can
+    be built.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 11 Jun 2009 16:35:02 +0200
+
 mlt (0.4.2-1) unstable; urgency=low
 
   * New upstream release.

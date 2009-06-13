@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 7.0.50), quilt (>= 0.46), ffmpeg (>= 0.svn20081115)
  kdelibs5-dev, ladspa-sdk, libavdevice-dev, libavformat-dev, libdv4-dev,
  libgtk2.0-dev, libjack-dev, libquicktime-dev, libsamplerate-dev,
  libsdl1.2-dev, libsox-dev (>= 14.1.0), libswscale-dev, libvorbis-dev,
- libxine-dev, libxml2-dev, imagemagick
+ libxine-dev, libxml2-dev, imagemagick, frei0r-plugins-dev
 Standards-Version: 3.8.1
 Section: libs
 Homepage: http://www.mltframework.org
@@ -103,4 +103,3 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: command line media player and video editor
  melt is a powerful multitrack command line oriented video editor.
-
