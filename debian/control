@@ -100,6 +100,6 @@ Description: command line media player and video editor (dummy package)
 Package: melt
 Section: utils
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libmlt-data (>= ${source:Version})
 Description: command line media player and video editor
  melt is a powerful multitrack command line oriented video editor.
