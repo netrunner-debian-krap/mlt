@@ -1,10 +1,15 @@
-mlt (0.4.2-3) UNRELEASED; urgency=low
+mlt (0.4.2+git20090618-1) UNRELEASED; urgency=low
 
+  * New git snapshot.
+    - Drop merged 07_custom_ldflags.diff patch.
+    - Drop merged 09_add_gcc4.3_support.diff patch.
+    - Drop merged 01_remove_ldconfig.diff patch.
+    - Drop merged 02_update_have_mmx.diff patch.
   * Add libmlt-data as dependency for melt, it can not play movies without the
     profiles.
   * Bump Standards-Version to 3.8.2 (no changes needed).
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 18 Jun 2009 08:17:22 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 18 Jun 2009 09:18:07 +0200
 
 mlt (0.4.2-2) unstable; urgency=low
 
