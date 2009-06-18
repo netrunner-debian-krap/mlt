@@ -9,6 +9,7 @@ mlt (0.4.2+git20090618-1) UNRELEASED; urgency=low
     profiles.
   * Bump Standards-Version to 3.8.2 (no changes needed).
   * Drop our melt manpage and install the new one from upstream.
+  * Drop versioned build dependency on ffmpeg.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 18 Jun 2009 09:22:44 +0200
 
