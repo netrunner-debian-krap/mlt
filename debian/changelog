@@ -1,3 +1,9 @@
+mlt (0.4.2+git20090618-2) unstable; urgency=low
+
+  * Add 02_missing_math_ftbfs.diff patch, which fixes a FTBFS on some arches.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 18 Jun 2009 13:06:18 +0200
+
 mlt (0.4.2+git20090618-1) unstable; urgency=low
 
   * New git snapshot.

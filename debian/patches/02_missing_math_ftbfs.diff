@@ -1,0 +1,14 @@
+# We need to link against the math lib for sqrt() which was missing on some platforms.
+
+diff -Naur mlt-0.4.2+git20090618.orig/src/modules/sox/Makefile mlt-0.4.2+git20090618/src/modules/sox/Makefile
+--- mlt-0.4.2+git20090618.orig/src/modules/sox/Makefile	2009-06-18 09:43:05.000000000 +0200
++++ mlt-0.4.2+git20090618/src/modules/sox/Makefile	2009-06-18 13:03:38.000000000 +0200
+@@ -2,7 +2,7 @@
+ 
+ CFLAGS += -I../..
+ 
+-LDFLAGS += -L../../framework -lmlt
++LDFLAGS += -L../../framework -lmlt -lm
+ 
+ include config.mak
+ 
