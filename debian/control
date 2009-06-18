@@ -93,7 +93,9 @@ Section: utils
 Architecture: all
 Depends: ${misc:Depends}, melt
 Description: command line media player and video editor (dummy package)
- melt is a powerful multitrack command line oriented video editor.
+ melt was meant as a test tool for the MLT framework, but it is also a powerful
+ multitrack command line oriented video editor. It could also used as an
+ minimalistic media player for audio and video files.
  .
  This package is a dummy transition package for melt.
 
@@ -102,4 +104,6 @@ Section: utils
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libmlt-data (>= ${source:Version})
 Description: command line media player and video editor
- melt is a powerful multitrack command line oriented video editor.
+ melt was meant as a test tool for the MLT framework, but it is also a powerful
+ multitrack command line oriented video editor. It could also used as an
+ minimalistic media player for audio and video files.

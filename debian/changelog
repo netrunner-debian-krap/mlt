@@ -1,4 +1,4 @@
-mlt (0.4.2+git20090618-1) UNRELEASED; urgency=low
+mlt (0.4.2+git20090618-1) unstable; urgency=low
 
   * New git snapshot.
     - Drop merged 07_custom_ldflags.diff patch.
@@ -9,9 +9,12 @@ mlt (0.4.2+git20090618-1) UNRELEASED; urgency=low
     profiles.
   * Bump Standards-Version to 3.8.2 (no changes needed).
   * Drop our melt manpage and install the new one from upstream.
+    - Add 01_fix_man_whatis.diff which fixes the whatis entry.
   * Drop versioned build dependency on ffmpeg.
+  * Extend a little bit the long-description of melt. Fixes lintian warning
+    extended-description-is-probably-too-short.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 18 Jun 2009 09:22:44 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 18 Jun 2009 09:41:39 +0200
 
 mlt (0.4.2-2) unstable; urgency=low
 
