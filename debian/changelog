@@ -1,5 +1,7 @@
-mlt (0.4.2+git20090618-3) UNRELEASED; urgency=low
+mlt (0.4.2+git20090621-1) UNRELEASED; urgency=low
 
+  * New git snapshot.
+    - Drop merged patches 01_fix_man_whatis and 02_missing_math_ftbfs.
   * Build libmlt-dbg, which contains the debugging symbols.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 21 Jun 2009 11:41:11 +0200
