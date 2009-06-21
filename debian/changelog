@@ -1,3 +1,9 @@
+mlt (0.4.2+git20090618-3) UNRELEASED; urgency=low
+
+  * Build libmlt-dbg, which contains the debugging symbols.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 21 Jun 2009 11:41:11 +0200
+
 mlt (0.4.2+git20090618-2) unstable; urgency=low
 
   * Add 02_missing_math_ftbfs.diff patch, which fixes a FTBFS on some arches.
