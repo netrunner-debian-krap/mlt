@@ -1,4 +1,4 @@
-mlt (0.4.2+git20090621-1) UNRELEASED; urgency=low
+mlt (0.4.2+git20090622-1) UNRELEASED; urgency=low
 
   * New git snapshot.
     - Drop merged patches 01_fix_man_whatis and 02_missing_math_ftbfs.
