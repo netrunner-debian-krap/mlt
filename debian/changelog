@@ -1,9 +1,9 @@
-mlt (0.4.2+git20090622-1) UNRELEASED; urgency=low
+mlt (0.4.2+git20090622-1) unstable; urgency=low
 
   * New git snapshot.
     - Drop merged patches 01_fix_man_whatis and 02_missing_math_ftbfs.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 21 Jun 2009 11:41:11 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 22 Jun 2009 22:49:41 +0200
 
 mlt (0.4.2+git20090618-2) unstable; urgency=low
 
