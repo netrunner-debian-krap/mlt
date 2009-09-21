@@ -4,8 +4,9 @@ mlt (0.4.4-3) UNRELEASED; urgency=low
     libmlt++2.
   * Bump Standards-Version to 3.8.3.
     - Add debian/README.source.
+  * Add patch description to 02_fix_sox_14.3.0_build.diff. Thanks lintian.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 21 Sep 2009 12:12:56 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 21 Sep 2009 12:14:36 +0200
 
 mlt (0.4.4-2) unstable; urgency=low
 
