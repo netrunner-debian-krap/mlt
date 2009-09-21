@@ -1,3 +1,10 @@
+mlt (0.4.4-3) UNRELEASED; urgency=low
+
+  * Add libmlt-dbg package, which contains the debugging symbols of libmlt1 and
+    libmlt++2.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 21 Sep 2009 11:50:40 +0200
+
 mlt (0.4.4-2) unstable; urgency=low
 
   * Add patches:

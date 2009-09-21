@@ -88,6 +88,21 @@ Description: MLT multimedia framework C++ wrapper (runtime)
  This package contains the files necessary for running applications that
  use the MLT multimedia framework C++ wrapper.
 
+Package: libmlt-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libmlt1 (= ${binary:Version}), libmlt++2 (= ${binary:Version})
+Description: multimedia framework (debugging symbols)
+ MLT is an open source multimedia framework, designed and developed for
+ television broadcasting. It provides a toolkit for broadcasters, video
+ editors, media players, transcoders, web streamers and many more types of
+ applications. The functionality of the system is provided via an assortment
+ of ready to use tools, xml authoring components, and an extendible plug-in
+ based API.
+ .
+ This package contains the debugging symbols for libmlt++ and libmlt
+
 Package: inigo
 Section: utils
 Architecture: all
