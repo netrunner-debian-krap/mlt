@@ -1,4 +1,4 @@
-mlt (0.4.4-3) UNRELEASED; urgency=low
+mlt (0.4.4-3) unstable; urgency=low
 
   * Add libmlt-dbg package, which contains the debugging symbols of libmlt1 and
     libmlt++2.
