@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 7.0.50), quilt (>= 0.46), ffmpeg,
  libgtk2.0-dev, libjack-dev, libquicktime-dev, libsamplerate-dev,
  libsdl1.2-dev, libsox-dev (>= 14.3.0), libswscale-dev, libvorbis-dev,
  libxine-dev, libxml2-dev, imagemagick, frei0r-plugins-dev
-Standards-Version: 3.8.2
+Standards-Version: 3.8.3
 Section: libs
 Homepage: http://www.mltframework.org
 
