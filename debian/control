@@ -103,17 +103,6 @@ Description: multimedia framework (debugging symbols)
  .
  This package contains the debugging symbols for libmlt++ and libmlt
 
-Package: inigo
-Section: utils
-Architecture: all
-Depends: ${misc:Depends}, melt
-Description: command line media player and video editor (dummy package)
- melt was meant as a test tool for the MLT framework, but it is also a powerful
- multitrack command line oriented video editor. It could also used as an
- minimalistic media player for audio and video files.
- .
- This package is a dummy transition package for melt.
-
 Package: melt
 Section: utils
 Architecture: any
