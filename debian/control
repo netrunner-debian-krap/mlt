@@ -14,7 +14,7 @@ Homepage: http://www.mltframework.org
 Package: libmlt-dev
 Section: libdevel
 Architecture: any
-Depends: ${misc:Depends}, libmlt1 (= ${binary:Version})
+Depends: ${misc:Depends}, libmlt2 (= ${binary:Version})
 Description: multimedia framework (development)
  MLT is an open source multimedia framework, designed and developed for
  television broadcasting. It provides a toolkit for broadcasters, video
@@ -26,7 +26,7 @@ Description: multimedia framework (development)
  This package contains the static libraries and headers for developing
  applications that use the MLT multimedia framework.
 
-Package: libmlt1
+Package: libmlt2
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Recommends: libmlt-data
@@ -46,7 +46,7 @@ Description: multimedia framework (runtime)
 Package: libmlt-data
 Architecture: all
 Depends: ${misc:Depends}
-Enhances: libmlt1
+Enhances: libmlt2
 Description: multimedia framework (data)
  MLT is an open source multimedia framework, designed and developed for
  television broadcasting. It provides a toolkit for broadcasters, video
@@ -60,7 +60,7 @@ Description: multimedia framework (data)
 Package: libmlt++-dev
 Section: libdevel
 Architecture: any
-Depends: libmlt++2 (= ${binary:Version}), ${misc:Depends}
+Depends: libmlt++3 (= ${binary:Version}), ${misc:Depends}
 Description: MLT multimedia framework C++ wrapper (development)
  MLT is an open source multimedia framework, designed and developed for
  television broadcasting. It provides a toolkit for broadcasters, video
@@ -72,7 +72,7 @@ Description: MLT multimedia framework C++ wrapper (development)
  This package contains the static libraries and headers for developing
  applications that use the MLT multimedia framework C++ wrapper.
 
-Package: libmlt++2
+Package: libmlt++3
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Conflicts: libmlt++0.2
@@ -92,7 +92,7 @@ Package: libmlt-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libmlt1 (= ${binary:Version}), libmlt++2 (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libmlt2 (= ${binary:Version}), libmlt++3 (= ${binary:Version})
 Description: multimedia framework (debugging symbols)
  MLT is an open source multimedia framework, designed and developed for
  television broadcasting. It provides a toolkit for broadcasters, video
