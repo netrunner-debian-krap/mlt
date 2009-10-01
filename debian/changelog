@@ -1,3 +1,9 @@
+mlt (0.4.4+git20090930-2) unstable; urgency=low
+
+  * Add missing conflicts and replaces for smooth upgrades.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 01 Oct 2009 08:14:07 +0200
+
 mlt (0.4.4+git20090930-1) unstable; urgency=low
 
   * New upstream git snapshot.
