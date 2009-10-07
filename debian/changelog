@@ -1,3 +1,9 @@
+mlt (0.4.6-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 07 Oct 2009 19:36:14 +0200
+
 mlt (0.4.4+git20091004-1) unstable; urgency=low
 
   * New upstream git snapshot.
