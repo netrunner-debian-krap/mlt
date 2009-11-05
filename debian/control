@@ -29,7 +29,7 @@ Description: multimedia framework (development)
 Package: libmlt2
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: libmlt-data
+Recommends: libmlt-data (>= ${source:Version})
 Conflicts: libmlt0.2, libmlt0.2.5, libmlt1
 Replaces: libmlt0.2, libmlt0.2.5, libmlt1
 Description: multimedia framework (runtime)
