@@ -1,10 +1,10 @@
-mlt (0.4.6+git20091124-1) UNRELEASED; urgency=low
+mlt (0.4.6+git20091124-1) unstable; urgency=low
 
   * New upstream git snapshot.
   * Recommend on the source:Version of libmlt-data.
   * Convert package to the 3.0 (quilt) format.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 24 Nov 2009 19:08:20 +0100
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 24 Nov 2009 19:08:47 +0100
 
 mlt (0.4.6-1) unstable; urgency=low
 
