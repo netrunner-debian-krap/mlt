@@ -1,4 +1,4 @@
-mlt (0.4.10-3) UNRELEASED; urgency=low
+mlt (0.4.10-3) unstable; urgency=low
 
   * Add new python-mlt2 package, which contains the python bindings of mlt.
     Closes: #563240
