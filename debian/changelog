@@ -1,3 +1,10 @@
+mlt (0.4.10-3) UNRELEASED; urgency=low
+
+  * Add new python-mlt2 package, which contains the python bindings of mlt.
+    Closes: #563240
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 02 Jan 2010 23:08:25 +0100
+
 mlt (0.4.10-2) unstable; urgency=low
 
   * Build with new gcc 4.4.

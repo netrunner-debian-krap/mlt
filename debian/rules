@@ -13,6 +13,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := \
 	--avformat-shared=/usr \
 	--avformat-swscale \
 	--luma-compress \
+	--swig-languages=python \
 	--qimage-libdir=/usr/lib
 
 %:

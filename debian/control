@@ -6,7 +6,8 @@ Build-Depends: debhelper (>= 7.0.50), ffmpeg,
  kdelibs5-dev, ladspa-sdk, libavdevice-dev, libavformat-dev, libdv4-dev,
  libgtk2.0-dev, libjack-dev, libquicktime-dev, libsamplerate-dev,
  libsdl1.2-dev, libsox-dev (>= 14.3.0), libswscale-dev, libvorbis-dev,
- libxine-dev, libxml2-dev, imagemagick, frei0r-plugins-dev
+ libxine-dev, libxml2-dev, imagemagick, frei0r-plugins-dev, swig,
+ python-dev
 Standards-Version: 3.8.3
 Section: libs
 Homepage: http://www.mltframework.org
@@ -111,3 +112,17 @@ Description: command line media player and video editor
  melt was meant as a test tool for the MLT framework, but it is also a powerful
  multitrack command line oriented video editor. It could also used as an
  minimalistic media player for audio and video files.
+
+Package: python-mlt2
+Architecture: any
+Section: python
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python (>= 2.5.4)
+Description: multimedia framework (python bindings)
+ MLT is an open source multimedia framework, designed and developed for
+ television broadcasting. It provides a toolkit for broadcasters, video
+ editors, media players, transcoders, web streamers and many more types of
+ applications. The functionality of the system is provided via an assortment
+ of ready to use tools, xml authoring components, and an extendible plug-in
+ based API.
+ .
+ This package contains the Python bindings for the mlt package.
