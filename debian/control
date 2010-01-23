@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 7.0.50), ffmpeg,
  libgtk2.0-dev, libjack-dev, libquicktime-dev, libsamplerate-dev,
  libsdl1.2-dev, libsox-dev (>= 14.3.0), libswscale-dev, libvorbis-dev,
  libxine-dev, libxml2-dev, imagemagick, frei0r-plugins-dev, swig,
- python-dev
+ python-dev, python-support
 Standards-Version: 3.8.3
 Section: libs
 Homepage: http://www.mltframework.org
@@ -116,7 +116,8 @@ Description: command line media player and video editor
 Package: python-mlt2
 Architecture: any
 Section: python
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, python (>= 2.5.4)
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
+Provides: ${python:Provides}
 Description: multimedia framework (python bindings)
  MLT is an open source multimedia framework, designed and developed for
  television broadcasting. It provides a toolkit for broadcasters, video

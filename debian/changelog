@@ -1,3 +1,11 @@
+mlt (0.4.10-4) unstable; urgency=low
+
+  * Add python-support support and thus byte-compile the Python files.
+    Much thanks for the patch to Evengi Golov.
+    Closes: #566043
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 23 Jan 2010 14:41:20 +0100
+
 mlt (0.4.10-3) unstable; urgency=low
 
   * Add new python-mlt2 package, which contains the python bindings of mlt.
