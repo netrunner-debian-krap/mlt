@@ -1,11 +1,12 @@
-mlt (0.4.10-5) UNRELEASED; urgency=low
+mlt (0.4.10-5) UNRELEASED; urgency=high
 
   * Bump Standards-Version to 3.8.4 (no changes needed).
   * Readd python-mlt2.install, it was still in trunk but was lost in the
     0.4.10-4 tag.. Bumping urgency to high.
     Closes: #568736
+  * Drop debian/README.source.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 07 Feb 2010 14:39:40 +0100
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 07 Feb 2010 14:41:00 +0100
 
 mlt (0.4.10-4) unstable; urgency=low
 
