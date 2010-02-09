@@ -5,8 +5,10 @@ mlt (0.4.10-5) UNRELEASED; urgency=high
     0.4.10-4 tag.. Bumping urgency to high.
     Closes: #568736
   * Drop debian/README.source.
+  * Do not install mlt_wrap.so from the python bindings, it will produce
+    errors.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 07 Feb 2010 14:41:00 +0100
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 09 Feb 2010 21:49:25 +0100
 
 mlt (0.4.10-4) unstable; urgency=low
 
