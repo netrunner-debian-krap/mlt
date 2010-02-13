@@ -16,13 +16,23 @@ DEB_CONFIGURE_EXTRA_FLAGS := \
 	--swig-languages=python \
 	--qimage-libdir=/usr/lib
 
+PYTHON_DIR := usr/lib/$(shell pyversions -d)/site-packages
+
 %:
 	dh $@
 
 override_dh_auto_configure:
 	dh_auto_configure -- $(DEB_CONFIGURE_EXTRA_FLAGS)
 
+override_dh_auto_clean:
+	[ ! -f config.mak ] || $(MAKE) distclean
+	rm -f config.log *.pc src/modules/gtk2/config.h
+	find \( -name '*.o' -o -name '*.mak' -o -name '.depend' \) -delete
+
 override_dh_install:
+	mkdir -p debian/python-mlt2/$(PYTHON_DIR)
+	install -m 644 src/swig/python/mlt.py debian/python-mlt2/$(PYTHON_DIR)/mlt.py
+	install -m 644 src/swig/python/_mlt.so debian/python-mlt2/$(PYTHON_DIR)/_mlt.so
 	dh_install --list-missing
 
 override_dh_strip:

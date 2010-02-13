@@ -1,3 +1,11 @@
+mlt (0.4.10-6) UNRELEASED; urgency=low
+
+  * Add patch from Benjamin Drung to determine the Python version on build
+    time. Much thanks.
+    Closes: #569640
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 13 Feb 2010 11:47:52 +0100
+
 mlt (0.4.10-5) unstable; urgency=high
 
   * Bump Standards-Version to 3.8.4 (no changes needed).
