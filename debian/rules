@@ -4,7 +4,7 @@
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), "amd64"))
 	EXTRA_CONFIGURE_OPTS += --enable-motion_est --enable-mmx --enable-sse
 else
-	EXTRA_CONFIGURE_OPTS += --disable-motion_est --disable-mmx --disable-sse
+	EXTRA_CONFIGURE_OPTS += --disable-motion_est --disable-mmx --disable-sse --disable-sse2
 endif
 
 DEB_CONFIGURE_EXTRA_FLAGS := \
