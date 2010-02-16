@@ -1,10 +1,11 @@
-mlt (0.4.10-6) UNRELEASED; urgency=low
+mlt (0.5.0-1) UNRELEASED; urgency=low
 
+  * New upstream release.
   * Add patch from Benjamin Drung to determine the Python version on build
     time. Much thanks.
     Closes: #569640
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 13 Feb 2010 11:47:52 +0100
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 16 Feb 2010 14:07:38 +0100
 
 mlt (0.4.10-5) unstable; urgency=high
 
