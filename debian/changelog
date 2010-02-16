@@ -1,3 +1,10 @@
+mlt (0.5.0-2) unstable; urgency=low
+
+  * Fix FTBFS on all non-x86 architectures, because there was a hardcoded
+    -DARCH_X86 CFLAG. Removed it in 01-dont_hardcode_x86.diff.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 16 Feb 2010 18:05:34 +0100
+
 mlt (0.5.0-1) unstable; urgency=low
 
   * New upstream release.

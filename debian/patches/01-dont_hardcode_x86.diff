@@ -1,0 +1,11 @@
+# mlt FTBFS on all non x86 arches, because this flag is hardcoded.
+
+diff -Naur mlt-0.5.0.orig//src/modules/xine/Makefile mlt-0.5.0/src/modules/xine/Makefile
+--- mlt-0.5.0.orig//src/modules/xine/Makefile	2010-02-16 07:40:46.000000000 +0100
++++ mlt-0.5.0/src/modules/xine/Makefile	2010-02-16 18:04:09.000000000 +0100
+@@ -1,4 +1,4 @@
+-CFLAGS += -I../../ -DARCH_X86
++CFLAGS += -I../../
+ 
+ LDFLAGS += -L../../framework -lmlt
+ 
