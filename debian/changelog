@@ -1,3 +1,10 @@
+mlt (0.5.0-3) unstable; urgency=low
+
+  * Replace last patch with 01-deinterlace-no-mmx-sse.diff from upstream.
+    Closes: #570145
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 17 Feb 2010 18:47:35 +0100
+
 mlt (0.5.0-2) unstable; urgency=low
 
   * Fix FTBFS on all non-x86 architectures, because there was a hardcoded
