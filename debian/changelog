@@ -1,3 +1,10 @@
+mlt (0.5.2-1) unstable; urgency=low
+
+  * New upstream release.
+    - Remove merged 01-deinterlace-no-mmx-sse.diff patch.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 11 Mar 2010 18:38:14 +0100
+
 mlt (0.5.0-3) unstable; urgency=low
 
   * Replace last patch with 01-deinterlace-no-mmx-sse.diff from upstream.
