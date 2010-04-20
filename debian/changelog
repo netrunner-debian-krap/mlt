@@ -1,3 +1,9 @@
+mlt (0.5.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 20 Apr 2010 19:50:04 +0200
+
 mlt (0.5.2-1) unstable; urgency=low
 
   * New upstream release.
