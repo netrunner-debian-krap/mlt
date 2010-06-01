@@ -1,3 +1,12 @@
+mlt (0.5.4+git20100601-1) unstable; urgency=high
+
+  * New git snapshot.
+  * Build against the new sox library, bumping urgency to high, because of a
+    blocking transition.
+    Closes: #583953
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 01 Jun 2010 20:18:36 +0200
+
 mlt (0.5.4-1) unstable; urgency=low
 
   * New upstream release.
