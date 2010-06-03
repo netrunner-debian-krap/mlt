@@ -1,3 +1,9 @@
+mlt (0.5.4+git20100601-2) UNRELEASED; urgency=low
+
+  * Add the swig mlt.i file to the libmlt++-dev package.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 03 Jun 2010 11:46:07 +0200
+
 mlt (0.5.4+git20100601-1) unstable; urgency=high
 
   * New git snapshot.
