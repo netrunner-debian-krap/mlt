@@ -1,8 +1,11 @@
-mlt (0.5.4+git20100601-2) UNRELEASED; urgency=low
+mlt (0.5.6-1) UNRELEASED; urgency=low
 
+  * New upstream release.
+    - Add patch 01-in_out-points-region-transition.diff, which fixes a new
+      regression in this release with kdenlive.
   * Add the swig mlt.i file to the libmlt++-dev package.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 03 Jun 2010 11:46:07 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 21 Jun 2010 13:55:07 +0200
 
 mlt (0.5.4+git20100601-1) unstable; urgency=high
 
