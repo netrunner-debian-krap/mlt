@@ -1,4 +1,4 @@
-mlt (0.5.6-1) UNRELEASED; urgency=low
+mlt (0.5.6-1) unstable; urgency=low
 
   * New upstream release.
     - Add patch 01-in_out-points-region-transition.diff, which fixes a new
