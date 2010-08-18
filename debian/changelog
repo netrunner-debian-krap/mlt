@@ -1,3 +1,11 @@
+mlt (0.5.6+git20100727-1) unstable; urgency=low
+
+  * New upstream git snapshot from 27.07.2010.
+    - This snapshot fixes some memory leaks and corruptions and an infinite
+      loop.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 18 Aug 2010 20:55:50 +0200
+
 mlt (0.5.6-1) unstable; urgency=low
 
   * New upstream release.
