@@ -2,8 +2,9 @@ mlt (0.5.10-1) experimental; urgency=low
 
   * New upstream release.
     - Remove deprecated patch 01-in_out-points-region-transition.diff.
+  * Bump Standards-Version to 3.9.1 (no changes needed).
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 18 Sep 2010 10:23:16 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 18 Sep 2010 10:37:22 +0200
 
 mlt (0.5.6+git20100727-1) unstable; urgency=low
 

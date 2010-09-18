@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 7.0.50), ffmpeg,
  libsdl1.2-dev, libsox-dev (>= 14.3.0), libswscale-dev, libvorbis-dev,
  libxine-dev, libxml2-dev, imagemagick, frei0r-plugins-dev, swig,
  python-dev, python-support
-Standards-Version: 3.8.4
+Standards-Version: 3.9.1
 Section: libs
 Homepage: http://www.mltframework.org
 
