@@ -1,8 +1,9 @@
 mlt (0.6.0-1) UNRELEASED; urgency=low
 
   * New upstream release.
+  * Bump SONAME of libmlt from 2 to 3.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 02 Jan 2011 12:19:54 +0100
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 02 Jan 2011 12:38:45 +0100
 
 mlt (0.5.10-1) experimental; urgency=low
 
