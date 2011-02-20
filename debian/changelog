@@ -1,3 +1,10 @@
+mlt (0.6.2-3) unstable; urgency=low
+
+  * Remove python-mlt3.install, it is done automagic by debian/rules.
+    Thanks to Evgeni Golov.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 20 Feb 2011 11:16:32 +0100
+
 mlt (0.6.2-2) unstable; urgency=low
 
   * Upload to unstable.
