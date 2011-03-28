@@ -1,3 +1,10 @@
+mlt (0.7.0-1) unstable; urgency=low
+
+  * New upstream release.
+    Closes: #606123
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 28 Mar 2011 21:05:04 +0200
+
 mlt (0.6.2-3) unstable; urgency=low
 
   * Remove python-mlt3.install, it is done automagic by debian/rules.
