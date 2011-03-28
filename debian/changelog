@@ -2,6 +2,7 @@ mlt (0.7.0-1) unstable; urgency=low
 
   * New upstream release.
     Closes: #606123
+    - Bumped SONAME of libmlt to 4.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 28 Mar 2011 21:05:04 +0200
 
