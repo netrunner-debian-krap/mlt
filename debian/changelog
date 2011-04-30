@@ -2,8 +2,9 @@ mlt (0.7.0-2) UNRELEASED; urgency=low
 
   * Bump Standards-Version to 3.9.2 (no changes needed).
   * Wrap build dependencies.
+  * Build with enabled hardening-wrapper.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 30 Apr 2011 20:42:19 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 30 Apr 2011 20:43:41 +0200
 
 mlt (0.7.0-1) unstable; urgency=low
 
