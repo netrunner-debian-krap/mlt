@@ -1,3 +1,9 @@
+mlt (0.7.0-2) UNRELEASED; urgency=low
+
+  * Bump Standards-Version to 3.9.2 (no changes needed).
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 30 Apr 2011 20:41:00 +0200
+
 mlt (0.7.0-1) unstable; urgency=low
 
   * New upstream release.
