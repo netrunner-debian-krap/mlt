@@ -1,3 +1,9 @@
+mlt (0.7.2-2) UNRELEASED; urgency=low
+
+  * Add patch 01-build-on-kfreebsd.diff, so that mlt also builds on kFreeBSD.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 13 May 2011 21:57:19 +0200
+
 mlt (0.7.2-1) unstable; urgency=low
 
   * New upstream release.
