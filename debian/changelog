@@ -4,8 +4,9 @@ mlt (0.7.2+git20110529-1) UNRELEASED; urgency=low
     - Drop patch 01-build-on-kfreebsd, merged by upstream.
     - Fixed crash with framebuffer on amd64.
       #627133
+  * Disable swfdec.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 29 May 2011 14:53:19 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 29 May 2011 15:06:24 +0200
 
 mlt (0.7.2-2) unstable; urgency=low
 

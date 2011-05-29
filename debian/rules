@@ -16,7 +16,8 @@ DEB_CONFIGURE_EXTRA_FLAGS := \
 	--avformat-swscale \
 	--luma-compress \
 	--swig-languages=python \
-	--qimage-libdir=/usr/lib
+	--qimage-libdir=/usr/lib \
+	--disable-swfdec
 
 PYTHON_DIR := usr/lib/$(shell pyversions -d)/site-packages
 
