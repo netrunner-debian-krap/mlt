@@ -1,3 +1,10 @@
+mlt (0.7.2+git20110530-2) UNRELEASED; urgency=low
+
+  * Build with dh_python2 to fix the location of the debugging symbols of the
+    mlt python package. Much thanks to Evgenie Golov for his patch!
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 30 May 2011 21:07:53 +0200
+
 mlt (0.7.2+git20110530-1) unstable; urgency=low
 
   * New upstream git snapshot.

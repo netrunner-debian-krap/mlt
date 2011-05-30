@@ -19,10 +19,10 @@ DEB_CONFIGURE_EXTRA_FLAGS := \
 	--qimage-libdir=/usr/lib \
 	--disable-swfdec
 
-PYTHON_DIR := usr/lib/$(shell pyversions -d)/site-packages
+PYTHON_DIR := usr/lib/$(shell pyversions -d)/dist-packages
 
 %:
-	dh $@
+	dh $@ --with python2
 
 override_dh_auto_configure:
 	dh_auto_configure -- $(DEB_CONFIGURE_EXTRA_FLAGS)
@@ -40,3 +40,6 @@ override_dh_install:
 
 override_dh_strip:
 	dh_strip --dbg-package=libmlt-dbg
+
+override_dh_python2:
+	dh_python2 --no-guessing-versions

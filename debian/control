@@ -22,9 +22,8 @@ Build-Depends: debhelper (>= 7.0.50),
  imagemagick,
  frei0r-plugins-dev,
  swig,
- python-dev,
  hardening-wrapper,
- python-support
+ python-all-dev (>= 2.6.6-3~)
 Standards-Version: 3.9.2
 Section: libs
 Homepage: http://www.mltframework.org
