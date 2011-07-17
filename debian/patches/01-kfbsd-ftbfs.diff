@@ -1,0 +1,14 @@
+# Fix FTBFS on kfreebsd.
+
+diff -Naur mlt-0.7.4.orig/src/framework/mlt_property.h mlt-0.7.4/src/framework/mlt_property.h
+--- mlt-0.7.4.orig/src/framework/mlt_property.h	2011-07-17 00:09:51.000000000 +0200
++++ mlt-0.7.4/src/framework/mlt_property.h	2011-07-17 20:44:22.806703044 +0200
+@@ -26,7 +26,7 @@
+ 
+ #include "mlt_types.h"
+ 
+-#if defined(__linux__) || defined(__DARWIN__)
++#if defined(__linux__) || defined(__DARWIN__) || defined(__GLIBC__)
+ #include <xlocale.h>
+ #else
+ typedef void* locale_t;
