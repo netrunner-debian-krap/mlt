@@ -2,15 +2,16 @@
 
 export DEB_BUILD_HARDENING=1
 
-# Enable motion estimation, MMX and SSE on amd64 architecture
+# Enable MMX and SSE on amd64 architecture
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), "amd64"))
-	EXTRA_CONFIGURE_OPTS += --enable-motion_est --enable-mmx --enable-sse
+	EXTRA_CONFIGURE_OPTS += --enable-mmx --enable-sse
 else
-	EXTRA_CONFIGURE_OPTS += --disable-motion_est --disable-mmx --disable-sse --disable-sse2
+	EXTRA_CONFIGURE_OPTS += --disable-mmx --disable-sse --disable-sse2
 endif
 
 DEB_CONFIGURE_EXTRA_FLAGS := \
 	--enable-gpl \
+	--enable-motion_est \
 	$(EXTRA_CONFIGURE_OPTS) \
 	--avformat-shared=/usr \
 	--avformat-swscale \
