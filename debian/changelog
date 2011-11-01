@@ -1,3 +1,9 @@
+mlt (0.7.6-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 01 Nov 2011 21:40:39 +0100
+
 mlt (0.7.4-4) unstable; urgency=low
 
   * Do not try to build mlt with libquicktime on hurd-i386.
