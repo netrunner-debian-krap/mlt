@@ -1,8 +1,9 @@
 mlt (0.7.6-1) UNRELEASED; urgency=low
 
   * New upstream release.
+    - Remove all patches, they have been merged by upstream.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 01 Nov 2011 21:40:39 +0100
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 01 Nov 2011 21:42:51 +0100
 
 mlt (0.7.4-4) unstable; urgency=low
 
