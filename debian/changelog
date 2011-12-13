@@ -1,3 +1,11 @@
+mlt (0.7.6+git20111213-1) UNRELEASED; urgency=low
+
+  * New upstream git snapshot.
+    - Fixes segfault with wrong xml input.
+      Closes: #651604
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 13 Dec 2011 19:31:15 +0100
+
 mlt (0.7.6-2) unstable; urgency=low
 
   * Add patch 01-hurd-ftbfs to fix a FTBFS on hurd-i386.
