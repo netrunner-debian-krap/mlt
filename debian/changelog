@@ -2,7 +2,6 @@ mlt (0.7.6+git20111213-2) UNRELEASED; urgency=low
 
   * Remove patch 01-hurd-ftbfs, it still applies but was merged by upstream to
     a better location in the source code.
-  * Add oss4-dev build dependency on kfreebsd platforms.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 13 Dec 2011 20:49:06 +0100
 
