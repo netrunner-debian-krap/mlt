@@ -1,0 +1,15 @@
+# Use sys/soundcard.h as include path, so that mlt does not FTBFS on kfreebsd.
+# Closes: #652059
+
+diff -Naur mlt-0.7.6+git20111220.orig/src/modules/rtaudio/RtAudio.cpp mlt-0.7.6+git20111220/src/modules/rtaudio/RtAudio.cpp
+--- mlt-0.7.6+git20111220.orig/src/modules/rtaudio/RtAudio.cpp	2011-12-20 19:07:09.000000000 +0100
++++ mlt-0.7.6+git20111220/src/modules/rtaudio/RtAudio.cpp	2011-12-20 19:29:00.711420362 +0100
+@@ -6373,7 +6373,7 @@
+ #include <sys/ioctl.h>
+ #include <unistd.h>
+ #include <fcntl.h>
+-#include "soundcard.h"
++#include "sys/soundcard.h"
+ #include <errno.h>
+ #include <math.h>
+ 
