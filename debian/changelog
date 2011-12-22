@@ -1,3 +1,11 @@
+mlt (0.7.6+git20111221-1) UNRELEASED; urgency=low
+
+  * New upstream git snapshot.
+    - Removed all patches, they have been merged in this snapshot.
+    - Do not build with RtAudio on hurd and kfreebsd, to avoid FTBFS.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 22 Dec 2011 18:23:59 +0100
+
 mlt (0.7.6+git20111220-1) unstable; urgency=low
 
   * New upstream git snapshot.
