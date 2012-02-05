@@ -1,10 +1,10 @@
-mlt (0.7.6+git20120204-2) UNRELEASED; urgency=high
+mlt (0.7.6+git20120204-2) unstable; urgency=high
 
   * Add patch 01-various-upstream-fixes-20120205 which includes various
     upstream fixes like fixing a FTBFS with libav on architectures without MMX.
     Closes: #658376
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 05 Feb 2012 13:29:51 +0100
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sun, 05 Feb 2012 13:33:07 +0100
 
 mlt (0.7.6+git20120204-1) unstable; urgency=low
 
