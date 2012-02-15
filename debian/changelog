@@ -1,3 +1,10 @@
+mlt (0.7.8-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+    - Drop all patches.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 15 Feb 2012 21:55:25 +0100
+
 mlt (0.7.6+git20120204-2) unstable; urgency=high
 
   * Add patch 01-various-upstream-fixes-20120205 which includes various
