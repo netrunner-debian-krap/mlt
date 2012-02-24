@@ -1,8 +1,9 @@
 mlt (0.7.8-2) UNRELEASED; urgency=low
 
   * Bump Standards-Version to 3.9.3 (no changed needed).
+  * Override lintian warnings about no-symbols-control-file.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 24 Feb 2012 19:18:00 +0100
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 24 Feb 2012 19:36:02 +0100
 
 mlt (0.7.8-1) unstable; urgency=low
 
