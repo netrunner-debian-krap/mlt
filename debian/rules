@@ -11,6 +11,7 @@ endif
 
 DEB_CONFIGURE_EXTRA_FLAGS := \
 	--enable-gpl \
+	--enable-gpl3 \
 	--enable-motion_est \
 	$(EXTRA_CONFIGURE_OPTS) \
 	--avformat-shared=/usr \

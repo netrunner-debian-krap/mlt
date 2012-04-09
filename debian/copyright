@@ -95,5 +95,11 @@ oldfilm, frei0r.
 On Debian systems, the complete text of the GNU General Public License v2 or
 later can be found in `/usr/share/common-licenses/GPL-2'.
 
+The following module is licensed under the GNU General Public License v3 or
+later: transition_vqm
+
+On Debian systems, the complete text of the GNU General Public License v3 or
+later can be found in `/usr/share/common-licenses/GPL-3'.
+
 The Debian packaging is © 2008, Fathi Boudra <fabo@debian.org> and
 is licensed under the GPL, see `/usr/share/common-licenses/GPL-2'.

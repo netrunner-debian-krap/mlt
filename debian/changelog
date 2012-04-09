@@ -1,3 +1,10 @@
+mlt (0.7.8-3) UNRELEASED; urgency=low
+
+  * Build with --enable-gpl3 and add copyright notices about the transition_vqm
+    module.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 09 Apr 2012 13:36:05 +0200
+
 mlt (0.7.8-2) unstable; urgency=low
 
   * Bump Standards-Version to 3.9.3 (no changed needed).
