@@ -3,8 +3,9 @@ mlt (0.7.8+git20120409-1) UNRELEASED; urgency=low
   * New upstream git snapshot.
   * Build with --enable-gpl3 and add copyright notices about the transition_vqm
     module.
+  * Bump SONAME of libmlt and python-mlt to 5.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 09 Apr 2012 13:37:00 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 09 Apr 2012 13:58:16 +0200
 
 mlt (0.7.8-2) unstable; urgency=low
 
