@@ -1,9 +1,10 @@
-mlt (0.7.8-3) UNRELEASED; urgency=low
+mlt (0.7.8+git20120409-1) UNRELEASED; urgency=low
 
+  * New upstream git snapshot.
   * Build with --enable-gpl3 and add copyright notices about the transition_vqm
     module.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 09 Apr 2012 13:36:05 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 09 Apr 2012 13:37:00 +0200
 
 mlt (0.7.8-2) unstable; urgency=low
 
