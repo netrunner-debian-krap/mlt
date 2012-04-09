@@ -1,4 +1,4 @@
-mlt (0.7.8+git20120409-1) UNRELEASED; urgency=low
+mlt (0.7.8+git20120409-1) unstable; urgency=low
 
   * New upstream git snapshot.
     - Rendering problems introduced with 0.7.8 are gone.
@@ -7,7 +7,7 @@ mlt (0.7.8+git20120409-1) UNRELEASED; urgency=low
     module.
   * Bump SONAME of libmlt and python-mlt to 5.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 09 Apr 2012 14:25:28 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 09 Apr 2012 14:27:09 +0200
 
 mlt (0.7.8-2) unstable; urgency=low
 
