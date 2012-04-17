@@ -19,6 +19,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := \
 	--luma-compress \
 	--swig-languages=python \
 	--qimage-libdir=/usr/lib \
+	--disable-rtaudio \
 	--disable-swfdec
 
 PYTHON_DIR := usr/lib/$(shell pyversions -d)/dist-packages
