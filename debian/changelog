@@ -1,10 +1,10 @@
-mlt (0.7.8+git20120417-1) UNRELEASED; urgency=low
+mlt (0.7.8+git20120417-1) unstable; urgency=low
 
   * New upstream git snapshot.
   * Disable rtaudio consumer.
     Closes: #668893
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 17 Apr 2012 20:10:04 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 17 Apr 2012 20:10:59 +0200
 
 mlt (0.7.8+git20120409-1) unstable; urgency=low
 
