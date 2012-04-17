@@ -1,3 +1,9 @@
+mlt (0.7.8+git20120417-1) UNRELEASED; urgency=low
+
+  * New upstream git snapshot.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 17 Apr 2012 20:06:57 +0200
+
 mlt (0.7.8+git20120409-1) unstable; urgency=low
 
   * New upstream git snapshot.
