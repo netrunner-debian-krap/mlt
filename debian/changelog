@@ -1,8 +1,9 @@
 mlt (0.7.8+git20120601-1) UNRELEASED; urgency=low
 
   * New upstream git snapshot.
+  * Overwrite false positive hardening-no-fortify-functions lintian warning.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 01 Jun 2012 18:59:51 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 01 Jun 2012 19:01:52 +0200
 
 mlt (0.7.8+git20120417-1) unstable; urgency=low
 
