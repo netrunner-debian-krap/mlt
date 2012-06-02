@@ -1,8 +1,9 @@
-mlt (0.8.0-1) UNRELEASED; urgency=low
+mlt (0.8.0-1) unstable; urgency=low
 
-  * New upstreeam release.
+  * New upstreeam release.a
+    - Adjust lintian overrides.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 02 Jun 2012 18:44:33 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 02 Jun 2012 19:44:30 +0200
 
 mlt (0.7.8+git20120601-1) unstable; urgency=low
 
