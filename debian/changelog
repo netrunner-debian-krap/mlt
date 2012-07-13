@@ -1,6 +1,6 @@
 mlt (0.8.0-2) UNRELEASED; urgency=low
 
-  * Add patch 01-changes-preset-path, which corrects the path to the changed
+  * Add patch 01-changed-preset-path, which corrects the path to the changed
     location of the preset files.
     Closes: #681339
 
