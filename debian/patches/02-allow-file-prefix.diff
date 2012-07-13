@@ -1,0 +1,40 @@
+# Kdenlive may produce rendering scripts with enabled plugins, which use the
+# file:// prefix. However melt normaly do not support them, so they are now
+# available for the SOURCE variable.
+# Closes: #677276
+
+diff -Naur mlt-0.8.0.orig/src/modules/core/producer_loader.c mlt-0.8.0/src/modules/core/producer_loader.c
+--- mlt-0.8.0.orig/src/modules/core/producer_loader.c	2012-06-01 22:51:32.000000000 +0200
++++ mlt-0.8.0/src/modules/core/producer_loader.c	2012-07-13 20:31:26.785453360 +0200
+@@ -90,11 +90,16 @@
+ 			p ++;
+ 		}
+ 
++		// Strip file:// prefix
++		p = lookup;
++		if ( strncmp( lookup, "file://", 7 ) == 0 )
++			p += 7;
++
+ 		// Iterate through the dictionary
+ 		for ( i = 0; result == NULL && i < mlt_properties_count( dictionary ); i ++ )
+ 		{
+ 			char *name = mlt_properties_get_name( dictionary, i );
+-			if ( fnmatch( name, lookup, 0 ) == 0 )
++			if ( fnmatch( name, p, 0 ) == 0 )
+ 				result = create_from( profile, file, mlt_properties_get_value( dictionary, i ) );
+ 		}	
+ 
+diff -Naur mlt-0.8.0.orig/src/modules/xml/producer_xml.c mlt-0.8.0/src/modules/xml/producer_xml.c
+--- mlt-0.8.0.orig/src/modules/xml/producer_xml.c	2012-06-01 22:51:32.000000000 +0200
++++ mlt-0.8.0/src/modules/xml/producer_xml.c	2012-07-13 20:31:26.789453250 +0200
+@@ -1535,6 +1535,10 @@
+ 	char *filename = NULL;
+ 	int info = strcmp( id, "xml-string" ) ? 0 : 1;
+ 
++	// Strip file:// prefix
++	if ( data && strlen( data ) >= 7 && strncmp( data, "file://", 7 ) == 0 )
++		data += 7;
++
+ 	if ( data == NULL || !strcmp( data, "" ) || ( info == 0 && !file_exists( data ) ) )
+ 		return NULL;
+ 
