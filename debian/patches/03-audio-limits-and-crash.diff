@@ -1,0 +1,32 @@
+# melt/libav may crash if you supply invalid audio bitrates.
+# Closes: #681319
+
+diff -Naur mlt-0.8.0.orig/src/modules/avformat/consumer_avformat.c mlt-0.8.0/src/modules/avformat/consumer_avformat.c
+--- mlt-0.8.0.orig/src/modules/avformat/consumer_avformat.c	2012-07-13 20:27:19.692559127 +0200
++++ mlt-0.8.0/src/modules/avformat/consumer_avformat.c	2012-07-13 20:34:17.714427055 +0200
+@@ -668,6 +668,7 @@
+ 	else
+ 	{
+ 		mlt_log_warning( NULL, "%s: Unable to encode audio - disabling audio output.\n", __FILE__ );
++		audio_input_frame_size = 0;
+ 	}
+ 
+ 	return audio_input_frame_size;
+@@ -1405,7 +1406,17 @@
+ 			audio_input_frame_size = open_audio( properties, oc, audio_st[i], audio_outbuf_size,
+ 				acodec? acodec : NULL );
+ 			if ( !audio_input_frame_size )
++			{
++				// Remove the audio stream from the output context
++				int j;
++				for ( j = 0; j < oc->nb_streams; j++ )
++				{
++					if ( oc->streams[j] == audio_st[i] )
++						av_freep( &oc->streams[j] );
++				}
++				--oc->nb_streams;
+ 				audio_st[i] = NULL;
++			}
+ 		}
+ 
+ 		// Setup custom I/O if redirecting
