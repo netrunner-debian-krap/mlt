@@ -1,4 +1,4 @@
-mlt (0.8.0-2) UNRELEASED; urgency=low
+mlt (0.8.0-2) unstable; urgency=low
 
   * Add patch 01-changed-preset-path, which corrects the path to the changed
     location of the preset files.
@@ -9,7 +9,7 @@ mlt (0.8.0-2) UNRELEASED; urgency=low
     bitrates are submitted.
     Closes: #681319
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 12 Jul 2012 21:49:53 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 13 Jul 2012 20:43:02 +0200
 
 mlt (0.8.0-1) unstable; urgency=low
 
