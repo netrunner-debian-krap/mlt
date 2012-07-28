@@ -1,9 +1,9 @@
-mlt (0.8.0-3) UNRELEASED; urgency=low
+mlt (0.8.0-3) unstable; urgency=low
 
   * Disable compression from the luma module on mips. The convert process never
     finishes.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 28 Jul 2012 13:36:27 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 28 Jul 2012 13:44:24 +0200
 
 mlt (0.8.0-2) unstable; urgency=low
 
