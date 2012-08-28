@@ -1,0 +1,35 @@
+# Upstream patch to fix a memory leak when using mlt_cache for frames.
+
+diff -Naur mlt-0.8.0.orig/src/framework/mlt_cache.c mlt-0.8.0/src/framework/mlt_cache.c
+--- mlt-0.8.0.orig/src/framework/mlt_cache.c	2012-06-01 22:51:32.000000000 +0200
++++ mlt-0.8.0/src/framework/mlt_cache.c	2012-08-28 20:27:03.371711652 +0200
+@@ -83,6 +83,7 @@
+ {
+ 	int count;             /**< the number of items currently in the cache */
+ 	int size;              /**< the maximum number of items permitted in the cache <= \p MAX_CACHE_SIZE */
++	int is_frames;         /**< indicates if this cache is used to cache frames */
+ 	void* *current;        /**< pointer to the current array of pointers */
+ 	void* A[ MAX_CACHE_SIZE ];
+ 	void* B[ MAX_CACHE_SIZE ];
+@@ -122,6 +123,13 @@
+ {
+ 	char key[19];
+ 
++	if ( cache->is_frames )
++	{
++		// Frame caches are easy - just close the object as mlt_frame.
++		mlt_frame_close( object );
++		return;
++	}
++
+ 	// Fetch the cache item from the active list by its owner's address
+ 	sprintf( key, "%p", object );
+ 	mlt_cache_item item = mlt_properties_get_data( cache->active, key, NULL );
+@@ -554,6 +562,7 @@
+ 
+ 	// swap the current array
+ 	cache->current = (void**) alt;
++	cache->is_frames = 1;
+ 	pthread_mutex_unlock( &cache->mutex );
+ }
+ 

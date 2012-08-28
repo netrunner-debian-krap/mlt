@@ -1,3 +1,10 @@
+mlt (0.8.0-4) UNRELEASED; urgency=low
+
+  * Add upstream patch 04-cache-memory-leak, which fixes a memory leak when
+    using mlt_cache for frames.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 28 Aug 2012 20:31:07 +0200
+
 mlt (0.8.0-3) unstable; urgency=low
 
   * Disable compression from the luma module on mips. The convert process never
