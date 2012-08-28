@@ -1,0 +1,14 @@
+# Upstream patch to fix some LADSPA crashing on dlclose on some systems.
+
+diff -Naur mlt-0.8.0.orig/src/modules/jackrack/plugin_mgr.c mlt-0.8.0/src/modules/jackrack/plugin_mgr.c
+--- mlt-0.8.0.orig/src/modules/jackrack/plugin_mgr.c	2012-06-01 22:51:32.000000000 +0200
++++ mlt-0.8.0/src/modules/jackrack/plugin_mgr.c	2012-08-28 20:32:35.782841105 +0200
+@@ -80,7 +80,7 @@
+   int err;
+   
+   /* open the object file */
+-  dl_handle = dlopen (filename, RTLD_LAZY);
++  dl_handle = dlopen (filename, RTLD_NOW);
+   if (!dl_handle)
+     {
+       mlt_log_info( NULL, "%s: error opening shared object file '%s': %s\n",

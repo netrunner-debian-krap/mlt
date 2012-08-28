@@ -2,3 +2,4 @@
 02-allow-file-prefix.diff
 03-audio-limits-and-crash.diff
 04-cache-memory-leak.diff
+05-ladspa-crash.diff

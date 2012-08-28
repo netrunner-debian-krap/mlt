@@ -2,6 +2,8 @@ mlt (0.8.0-4) UNRELEASED; urgency=low
 
   * Add upstream patch 04-cache-memory-leak, which fixes a memory leak when
     using mlt_cache for frames.
+  * Add upstream patch 05-ladspa-crash, which fixes a potential LADSPA crash
+    on dlclose().
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 28 Aug 2012 20:31:07 +0200
 
