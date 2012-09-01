@@ -9,11 +9,6 @@ else
 	EXTRA_CONFIGURE_OPTS += --disable-mmx --disable-sse --disable-sse2
 endif
 
-# Do not enable luma compress on mips. The convert process never finishes
-ifneq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), "mips"))
-	LUMA_CONFIGURE_OPTS += --luma-compress
-endif
-
 DEB_CONFIGURE_EXTRA_FLAGS := \
 	--enable-gpl \
 	--enable-gpl3 \
@@ -21,7 +16,6 @@ DEB_CONFIGURE_EXTRA_FLAGS := \
 	$(EXTRA_CONFIGURE_OPTS) \
 	--avformat-shared=/usr \
 	--avformat-swscale \
-	$(LUMA_CONFIGURE_OPTS) \
 	--swig-languages=python \
 	--qimage-libdir=/usr/lib \
 	--disable-rtaudio \
