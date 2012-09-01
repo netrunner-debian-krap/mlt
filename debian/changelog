@@ -6,10 +6,10 @@ mlt (0.8.2-1) UNRELEASED; urgency=low
     - Remove merged patch 03-audio-limits-and-crash.
     - Remove merged patch 04-cache-memory-leak.
     - Remove merged patch 05-ladspa-crash.
-  * Completly disable the luma-compress option, it is not recommend by
+  * Completely disable the luma-compress option, it is not recommend by
     upstream.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 01 Sep 2012 13:15:22 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 01 Sep 2012 13:22:24 +0200
 
 mlt (0.8.0-4) unstable; urgency=low
 
