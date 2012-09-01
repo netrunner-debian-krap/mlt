@@ -8,6 +8,7 @@ mlt (0.8.2-1) UNRELEASED; urgency=low
     - Remove merged patch 05-ladspa-crash.
   * Completely disable the luma-compress option, it is not recommend by
     upstream.
+  * Use wildcards in lintian overrides.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 01 Sep 2012 13:22:24 +0200
 

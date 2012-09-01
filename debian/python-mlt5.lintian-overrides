@@ -1,1 +1,1 @@
-python-mlt5: hardening-no-fortify-functions usr/lib/python2.7/dist-packages/_mlt.so
+python-mlt5: hardening-no-fortify-functions usr/lib/python*/dist-packages/_mlt.so
