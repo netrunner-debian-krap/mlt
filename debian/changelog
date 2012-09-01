@@ -1,4 +1,4 @@
-mlt (0.8.2-1) UNRELEASED; urgency=low
+mlt (0.8.2-1) experimental; urgency=low
 
   * New upstream release.
     - Refresh hunky patch 01-changed-preset-path.
@@ -10,7 +10,7 @@ mlt (0.8.2-1) UNRELEASED; urgency=low
     upstream.
   * Use wildcards in lintian overrides.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 01 Sep 2012 13:22:24 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 01 Sep 2012 13:27:35 +0200
 
 mlt (0.8.0-4) unstable; urgency=low
 
