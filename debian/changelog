@@ -1,3 +1,14 @@
+mlt (0.8.2-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+    - Refresh hunky patch 01-changed-preset-path.
+    - Remove merged patch 02-allow-file-prefix.
+    - Remove merged patch 03-audio-limits-and-crash.
+    - Remove merged patch 04-cache-memory-leak.
+    - Remove merged patch 05-ladspa-crash.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Sat, 01 Sep 2012 13:15:22 +0200
+
 mlt (0.8.0-4) unstable; urgency=low
 
   * Add upstream patch 04-cache-memory-leak, which fixes a memory leak when

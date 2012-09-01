@@ -4,9 +4,9 @@
 # /usr/share/avconv/*.avpreset
 # Closes: #681339
 
-diff -Naur mlt-0.8.0.orig/src/modules/avformat/configure mlt-0.8.0/src/modules/avformat/configure
---- mlt-0.8.0.orig/src/modules/avformat/configure	2012-06-01 22:51:32.000000000 +0200
-+++ mlt-0.8.0/src/modules/avformat/configure	2012-07-12 21:41:31.506776608 +0200
+diff -Naur mlt-0.8.2.orig/src/modules/avformat/configure mlt-0.8.2/src/modules/avformat/configure
+--- mlt-0.8.2.orig/src/modules/avformat/configure	2012-08-28 18:25:58.000000000 +0200
++++ mlt-0.8.2/src/modules/avformat/configure	2012-09-01 13:16:41.656242197 +0200
 @@ -86,7 +86,7 @@
  	then 
  		if [ -d "$static_ffmpeg" ]
@@ -16,10 +16,10 @@ diff -Naur mlt-0.8.0.orig/src/modules/avformat/configure mlt-0.8.0/src/modules/a
  			echo "CFLAGS+=-I$static_ffmpeg" >> config.mak
  			echo "LDFLAGS+=-L$static_ffmpeg/libavformat -L$static_ffmpeg/libavcodec -L$static_ffmpeg/libavutil" >> config.mak
  			[ $targetos = "Darwin" ] &&
-diff -Naur mlt-0.8.0.orig/src/modules/avformat/consumer_avformat.c mlt-0.8.0/src/modules/avformat/consumer_avformat.c
---- mlt-0.8.0.orig/src/modules/avformat/consumer_avformat.c	2012-06-01 22:51:32.000000000 +0200
-+++ mlt-0.8.0/src/modules/avformat/consumer_avformat.c	2012-07-12 21:42:49.242780570 +0200
-@@ -731,12 +731,12 @@
+diff -Naur mlt-0.8.2.orig/src/modules/avformat/consumer_avformat.c mlt-0.8.2/src/modules/avformat/consumer_avformat.c
+--- mlt-0.8.2.orig/src/modules/avformat/consumer_avformat.c	2012-08-28 18:25:58.000000000 +0200
++++ mlt-0.8.2/src/modules/avformat/consumer_avformat.c	2012-09-01 13:16:41.656242197 +0200
+@@ -732,12 +732,12 @@
  				AVCodec *codec = avcodec_find_encoder( c->codec_id );
  				if ( codec )
  				{
