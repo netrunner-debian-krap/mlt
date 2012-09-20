@@ -1,3 +1,9 @@
+mlt (0.8.2-2) UNRELEASED; urgency=low
+
+  * Bump Standards-Version to 3.9.4 (no changes needed).
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 20 Sep 2012 11:18:07 +0200
+
 mlt (0.8.2-1) experimental; urgency=low
 
   * New upstream release.
