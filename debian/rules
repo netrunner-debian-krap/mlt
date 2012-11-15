@@ -45,3 +45,6 @@ override_dh_strip:
 
 override_dh_python2:
 	dh_python2 --no-guessing-versions
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz
