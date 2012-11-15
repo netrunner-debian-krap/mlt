@@ -1,9 +1,9 @@
 mlt (0.8.6-1) UNRELEASED; urgency=low
 
   * New upstream release.
+    - Adjust libmlt++3 lintian override.
   * Bump Standards-Version to 3.9.4 (no changes needed).
   * Switch to xz compression and add a Pre-Depends on dpkg.
-  * Use wildcards for libmlt++3 lintian override.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 20 Sep 2012 11:18:07 +0200
 
