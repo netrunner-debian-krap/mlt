@@ -1,10 +1,10 @@
-mlt (0.8.6-2) UNRELEASED; urgency=low
+mlt (0.8.6-2) experimental; urgency=low
 
   * Bump compat level to 9.
     - Adjust paths to libdir triplets.
   * Remove unused python-mlt5 lintian override.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 14 Jan 2013 18:58:49 +0100
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 14 Jan 2013 19:09:02 +0100
 
 mlt (0.8.6-1) experimental; urgency=low
 
