@@ -2,7 +2,7 @@ Source: mlt
 Priority: optional
 Maintainer: Fathi Boudra <fabo@debian.org>
 Uploaders: Patrick Matthäi <pmatthaei@debian.org>
-Build-Depends: debhelper (>= 7.0.50),
+Build-Depends: debhelper (>= 9),
  ffmpeg,
  kdelibs5-dev,
  ladspa-sdk,
@@ -31,7 +31,8 @@ Homepage: http://www.mltframework.org
 Package: libmlt-dev
 Section: libdevel
 Architecture: any
-Pre-Depends: dpkg (>= 1.15.6~)
+Pre-Depends: dpkg (>= 1.15.6~),
+ ${misc:Pre-Depends}
 Depends: ${misc:Depends},
  libmlt5 (= ${binary:Version})
 Description: multimedia framework (development)
@@ -47,7 +48,8 @@ Description: multimedia framework (development)
 
 Package: libmlt5
 Architecture: any
-Pre-Depends: dpkg (>= 1.15.6~)
+Pre-Depends: dpkg (>= 1.15.6~),
+ ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
  ${misc:Depends}
 Recommends: libmlt-data (>= ${source:Version})
@@ -76,7 +78,8 @@ Description: multimedia framework (runtime)
 
 Package: libmlt-data
 Architecture: all
-Pre-Depends: dpkg (>= 1.15.6~)
+Pre-Depends: dpkg (>= 1.15.6~),
+ ${misc:Pre-Depends}
 Depends: ${misc:Depends}
 Enhances: libmlt5
 Description: multimedia framework (data)
@@ -92,7 +95,8 @@ Description: multimedia framework (data)
 Package: libmlt++-dev
 Section: libdevel
 Architecture: any
-Pre-Depends: dpkg (>= 1.15.6~)
+Pre-Depends: dpkg (>= 1.15.6~),
+ ${misc:Pre-Depends}
 Depends: libmlt++3 (= ${binary:Version}),
  ${misc:Depends}
 Description: MLT multimedia framework C++ wrapper (development)
@@ -108,7 +112,8 @@ Description: MLT multimedia framework C++ wrapper (development)
 
 Package: libmlt++3
 Architecture: any
-Pre-Depends: dpkg (>= 1.15.6~)
+Pre-Depends: dpkg (>= 1.15.6~),
+ ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
  ${misc:Depends}
 Conflicts: libmlt++0.2,
@@ -130,7 +135,8 @@ Package: libmlt-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Pre-Depends: dpkg (>= 1.15.6~)
+Pre-Depends: dpkg (>= 1.15.6~),
+ ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
  ${misc:Depends},
  libmlt5 (= ${binary:Version}),
@@ -148,7 +154,8 @@ Description: multimedia framework (debugging symbols)
 Package: melt
 Section: utils
 Architecture: any
-Pre-Depends: dpkg (>= 1.15.6~)
+Pre-Depends: dpkg (>= 1.15.6~),
+ ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
  ${misc:Depends},
  libmlt-data (>= ${source:Version})
@@ -160,7 +167,8 @@ Description: command line media player and video editor
 Package: python-mlt5
 Architecture: any
 Section: python
-Pre-Depends: dpkg (>= 1.15.6~)
+Pre-Depends: dpkg (>= 1.15.6~),
+ ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
  ${misc:Depends},
  ${python:Depends}
