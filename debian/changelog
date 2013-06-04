@@ -1,5 +1,6 @@
-mlt (0.8.8-3) UNRELEASED; urgency=low
+mlt (0.9.0-1) UNRELEASED; urgency=low
 
+  * New upstream release.
   * Add dependency information to libmlt and libmlt++ with dh_makeshlibs.
     Closes: #709249
 
