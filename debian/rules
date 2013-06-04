@@ -35,9 +35,9 @@ override_dh_auto_clean:
 	find \( -name '*.o' -o -name '*.mak' -o -name '.depend' \) -delete
 
 override_dh_install:
-	mkdir -p debian/python-mlt5/$(PYTHON_DIR)
-	install -m 644 src/swig/python/mlt.py debian/python-mlt5/$(PYTHON_DIR)/mlt.py
-	install -m 644 src/swig/python/_mlt.so debian/python-mlt5/$(PYTHON_DIR)/_mlt.so
+	mkdir -p debian/python-mlt6/$(PYTHON_DIR)
+	install -m 644 src/swig/python/mlt.py debian/python-mlt6/$(PYTHON_DIR)/mlt.py
+	install -m 644 src/swig/python/_mlt.so debian/python-mlt6/$(PYTHON_DIR)/_mlt.so
 	dh_install --list-missing
 
 override_dh_strip:

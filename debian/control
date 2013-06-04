@@ -36,7 +36,7 @@ Architecture: any
 Pre-Depends: dpkg (>= 1.15.6~),
  ${misc:Pre-Depends}
 Depends: ${misc:Depends},
- libmlt5 (= ${binary:Version})
+ libmlt6 (= ${binary:Version})
 Description: multimedia framework (development)
  MLT is an open source multimedia framework, designed and developed for
  television broadcasting. It provides a toolkit for broadcasters, video
@@ -48,7 +48,7 @@ Description: multimedia framework (development)
  This package contains the static libraries and headers for developing
  applications that use the MLT multimedia framework.
 
-Package: libmlt5
+Package: libmlt6
 Architecture: any
 Pre-Depends: dpkg (>= 1.15.6~),
  ${misc:Pre-Depends}
@@ -60,13 +60,15 @@ Conflicts: libmlt0.2,
  libmlt1,
  libmlt2,
  libmlt3,
- libmlt4
+ libmlt4,
+ libmlt5
 Replaces: libmlt0.2,
  libmlt0.2.5,
  libmlt1,
  libmlt2,
  libmlt3,
- libmlt4
+ libmlt4,
+ libmlt5
 Description: multimedia framework (runtime)
  MLT is an open source multimedia framework, designed and developed for
  television broadcasting. It provides a toolkit for broadcasters, video
@@ -83,7 +85,7 @@ Architecture: all
 Pre-Depends: dpkg (>= 1.15.6~),
  ${misc:Pre-Depends}
 Depends: ${misc:Depends}
-Enhances: libmlt5
+Enhances: libmlt6
 Description: multimedia framework (data)
  MLT is an open source multimedia framework, designed and developed for
  television broadcasting. It provides a toolkit for broadcasters, video
@@ -141,7 +143,7 @@ Pre-Depends: dpkg (>= 1.15.6~),
  ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
  ${misc:Depends},
- libmlt5 (= ${binary:Version}),
+ libmlt6 (= ${binary:Version}),
  libmlt++3 (= ${binary:Version})
 Description: multimedia framework (debugging symbols)
  MLT is an open source multimedia framework, designed and developed for
@@ -166,7 +168,7 @@ Description: command line media player and video editor
  multitrack command line oriented video editor. It could also used as an
  minimalistic media player for audio and video files.
 
-Package: python-mlt5
+Package: python-mlt6
 Architecture: any
 Section: python
 Pre-Depends: dpkg (>= 1.15.6~),
@@ -176,9 +178,11 @@ Depends: ${shlibs:Depends},
  ${python:Depends}
 Provides: ${python:Provides}
 Conflicts: python-mlt2,
- python-mlt3
+ python-mlt3,
+ python-mlt5
 Replaces: python-mlt2,
- python-mlt3
+ python-mlt3,
+ python-mlt5
 Description: multimedia framework (python bindings)
  MLT is an open source multimedia framework, designed and developed for
  television broadcasting. It provides a toolkit for broadcasters, video
