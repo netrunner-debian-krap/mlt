@@ -5,6 +5,7 @@ Uploaders: Patrick Matthäi <pmatthaei@debian.org>
 Build-Depends: debhelper (>= 9),
  libav-tools,
  kdelibs5-dev,
+ libqt4-dev,
  ladspa-sdk,
  libavdevice-dev,
  libavformat-dev,

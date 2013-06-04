@@ -2,6 +2,7 @@ mlt (0.9.0-1) UNRELEASED; urgency=low
 
   * New upstream release.
     - Rewrite patch 01-changed-preset-path.
+    - Build dependency on libqt4-dev added.
   * Add dependency information to libmlt and libmlt++ with dh_makeshlibs.
     Closes: #709249
   * Build depend on libav-tools instead of ffmpeg.
