@@ -4,6 +4,7 @@ mlt (0.9.0-1) UNRELEASED; urgency=low
     - Rewrite patch 01-changed-preset-path.
   * Add dependency information to libmlt and libmlt++ with dh_makeshlibs.
     Closes: #709249
+  * Build depend on libav-tools instead of ffmpeg.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 04 Jun 2013 11:41:30 +0200
 
