@@ -43,6 +43,9 @@ override_dh_install:
 override_dh_strip:
 	dh_strip --dbg-package=libmlt-dbg
 
+override_dh_makeshlibs:
+	dh_makeshlibs -V
+
 override_dh_python2:
 	dh_python2 --no-guessing-versions
 
