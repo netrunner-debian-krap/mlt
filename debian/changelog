@@ -1,4 +1,4 @@
-mlt (0.9.0-1) unstable; urgency=low
+mlt (0.9.0-1) UNRELEASED; urgency=low
 
   * New upstream release.
     - Rewrite patch 01-changed-preset-path.
@@ -7,6 +7,11 @@ mlt (0.9.0-1) unstable; urgency=low
   * Add dependency information to libmlt and libmlt++ with dh_makeshlibs.
     Closes: #709249
   * Build depend on libav-tools instead of ffmpeg.
+#TODO:
+#Removed tag
+#debian/copyright sync
+#unversioned python-mlt
+#check if /usr/lib/mltX/ is possible
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 10 Jun 2013 10:49:45 +0200
 
