@@ -7,6 +7,8 @@ mlt (0.9.0-1) UNRELEASED; urgency=low
   * Add dependency information to libmlt and libmlt++ with dh_makeshlibs.
     Closes: #709249
   * Build depend on libav-tools instead of ffmpeg.
+  * Create debian/copyright from scratch.
+    Closes: #711858
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 10 Jun 2013 10:49:45 +0200
 
