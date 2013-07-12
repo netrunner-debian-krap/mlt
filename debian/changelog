@@ -1,4 +1,4 @@
-mlt (0.9.0-1) UNRELEASED; urgency=low
+mlt (0.9.0-1) unstable; urgency=low
 
   * New upstream release.
     - Rewrite patch 01-changed-preset-path.
@@ -12,7 +12,7 @@ mlt (0.9.0-1) UNRELEASED; urgency=low
   * Rename python-mlt5 package to python-mlt.
   * Overwrite false positive lintian warning spelling-error-in-binary.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 10 Jun 2013 10:49:45 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 12 Jul 2013 13:29:29 +0200
 
 mlt (0.8.8-2) unstable; urgency=low
 
