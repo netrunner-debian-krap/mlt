@@ -168,7 +168,7 @@ Description: command line media player and video editor
  multitrack command line oriented video editor. It could also used as an
  minimalistic media player for audio and video files.
 
-Package: python-mlt6
+Package: python-mlt
 Architecture: any
 Section: python
 Pre-Depends: dpkg (>= 1.15.6~),
