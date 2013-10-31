@@ -1,6 +1,7 @@
 mlt (0.9.0-3) UNRELEASED; urgency=low
 
   * Bump Standards-Version to 3.9.5 (no changes needed).
+  * Don't explicitly request xz compression - dpkg 1.17 does this by default.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 31 Oct 2013 10:46:56 +0100
 
