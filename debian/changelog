@@ -1,9 +1,11 @@
-mlt (0.9.0-3) UNRELEASED; urgency=low
+mlt (0.9.0-3) UNRELEASED; urgency=high
 
   * Bump Standards-Version to 3.9.5 (no changes needed).
   * Don't explicitly request xz compression - dpkg 1.17 does this by default.
   * Overwrite debian-watch-may-check-gpg-signature warning. There is no GPG
     signature available.
+  * Add upstream patch 03-freetype-ftbfs to fix a FTBFS.
+    Closes: #733375
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 31 Oct 2013 10:46:56 +0100
 
