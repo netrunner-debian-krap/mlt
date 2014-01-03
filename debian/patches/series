@@ -1,2 +1,3 @@
 01-changed-preset-path.diff
+02-crash-empty-ladspa-path.diff
 03-freetype-ftbfs.diff

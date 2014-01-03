@@ -6,6 +6,8 @@ mlt (0.9.0-3) UNRELEASED; urgency=high
     signature available.
   * Add upstream patch 03-freetype-ftbfs to fix a FTBFS.
     Closes: #733375
+  * Patch 02-crash-empty-ladspa-path was not applied, because it was missing in
+    debian/patches/series.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 31 Oct 2013 10:46:56 +0100
 
