@@ -1,4 +1,4 @@
-mlt (0.9.0-3) UNRELEASED; urgency=high
+mlt (0.9.0-3) unstable; urgency=high
 
   * Bump Standards-Version to 3.9.5 (no changes needed).
   * Don't explicitly request xz compression - dpkg 1.17 does this by default.
@@ -9,7 +9,7 @@ mlt (0.9.0-3) UNRELEASED; urgency=high
   * Patch 02-crash-empty-ladspa-path was not applied, because it was missing in
     debian/patches/series.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 31 Oct 2013 10:46:56 +0100
+ -- Patrick Matthäi <pmatthaei@debian.org>  Fri, 03 Jan 2014 12:01:01 +0100
 
 mlt (0.9.0-2) unstable; urgency=low
 
