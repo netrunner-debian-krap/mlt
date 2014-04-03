@@ -1,4 +1,4 @@
-mlt (0.9.0+dfsg1-1) UNRELEASED; urgency=high
+mlt (0.9.0+dfsg1-1) unstable; urgency=high
 
   * Remove demo/txtField.swf from source and repackage mlt as +dfsg1.
     Closes: #737428
@@ -6,7 +6,7 @@ mlt (0.9.0+dfsg1-1) UNRELEASED; urgency=high
     Closes: #741362
   * Remove useless Pre-Depends fields.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 03 Apr 2014 10:32:39 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 03 Apr 2014 10:45:58 +0200
 
 mlt (0.9.0-3) unstable; urgency=high
 
