@@ -1,3 +1,10 @@
+mlt (0.9.0+dfsg1-1) UNRELEASED; urgency=high
+
+  * Remove demo/txtField.swf from source and repackage mlt as +dfsg1.
+    Closes: #737428
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 03 Apr 2014 10:30:10 +0200
+
 mlt (0.9.0-3) unstable; urgency=high
 
   * Bump Standards-Version to 3.9.5 (no changes needed).
