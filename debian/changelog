@@ -1,3 +1,10 @@
+mlt (0.9.0+dfsg1-2) UNRELEASED; urgency=medium
+
+  * Overwrite lintian warning intra-source-package-circular-dependency, because
+    those dependencies are required.
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 03 Jun 2014 09:48:44 +0200
+
 mlt (0.9.0+dfsg1-1) unstable; urgency=high
 
   * Remove demo/txtField.swf from source and repackage mlt as +dfsg1.
