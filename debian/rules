@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
 
-export DEB_BUILD_HARDENING=1
-
 # Enable MMX and SSE on amd64 architecture
 ifeq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), "amd64"))
 	EXTRA_CONFIGURE_OPTS += --enable-mmx --enable-sse

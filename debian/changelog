@@ -6,6 +6,7 @@ mlt (0.9.2-1) UNRELEASED; urgency=medium
     - Remove merged patch 03-freetype-ftbfs.
   * Overwrite lintian warning intra-source-package-circular-dependency, because
     those dependencies are required.
+  * Move away from hardening-wrapper.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Tue, 03 Jun 2014 09:48:44 +0200
 

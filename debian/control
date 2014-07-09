@@ -24,7 +24,6 @@ Build-Depends: debhelper (>= 9),
  imagemagick,
  frei0r-plugins-dev,
  swig,
- hardening-wrapper,
  python-all-dev (>= 2.6.6-3~)
 Standards-Version: 3.9.5
 Section: libs
