@@ -1,0 +1,110 @@
+# Upstream patch to fix audio encoding with current libav versions.
+# URL: https://github.com/mltframework/mlt/commit/3ac0201b2526e2d11280005f67a63979fb5c783c
+# Closes: #761593
+
+diff -Naur mlt-0.9.2.orig/src/modules/avformat/consumer_avformat.c mlt-0.9.2/src/modules/avformat/consumer_avformat.c
+--- mlt-0.9.2.orig/src/modules/avformat/consumer_avformat.c	2014-09-24 18:44:52.000000000 +0200
++++ mlt-0.9.2/src/modules/avformat/consumer_avformat.c	2014-09-24 18:50:32.474014332 +0200
+@@ -1232,12 +1232,15 @@
+ 	char key[27];
+ 	mlt_properties frame_meta_properties = mlt_properties_new();
+ 	int error_count = 0;
+-	int64_t synth_audio_pts = 0;
++	int64_t sample_count[ MAX_AUDIO_STREAMS ];
+ 
+ 	// Initialize audio_st
+ 	int i = MAX_AUDIO_STREAMS;
+ 	while ( i-- )
++	{
+ 		audio_st[i] = NULL;
++		sample_count[i] = 0;
++	}
+ 
+ 	// Check for user selected format first
+ 	if ( format != NULL )
+@@ -1657,9 +1660,8 @@
+ #if LIBAVCODEC_VERSION_MAJOR >= 54
+ 							audio_avframe->nb_samples = FFMAX( samples, audio_input_nb_samples );
+ #if LIBAVCODEC_VERSION_MAJOR >= 55
+-							if ( audio_codec_id == AV_CODEC_ID_VORBIS )
+-								audio_avframe->pts = synth_audio_pts;
+-							synth_audio_pts += audio_avframe->nb_samples;
++							audio_avframe->pts = sample_count[i];
++							sample_count[i] += audio_avframe->nb_samples;
+ #endif
+ 							avcodec_fill_audio_frame( audio_avframe, codec->channels, codec->sample_fmt,
+ 								(const uint8_t*) p, AUDIO_ENCODE_BUFFER_SIZE, 0 );
+@@ -1749,9 +1751,8 @@
+ #if LIBAVCODEC_VERSION_MAJOR >= 54
+ 							audio_avframe->nb_samples = FFMAX( samples, audio_input_nb_samples );
+ #if LIBAVCODEC_VERSION_MAJOR >= 55
+-							if ( audio_codec_id == AV_CODEC_ID_VORBIS )
+-								audio_avframe->pts = synth_audio_pts;
+-							synth_audio_pts += audio_avframe->nb_samples;
++							audio_avframe->pts = sample_count[i];
++							sample_count[i] += audio_avframe->nb_samples;
+ #endif
+ 							avcodec_fill_audio_frame( audio_avframe, codec->channels, codec->sample_fmt,
+ 								(const uint8_t*) audio_buf_2, AUDIO_ENCODE_BUFFER_SIZE, 0 );
+@@ -1788,8 +1789,8 @@
+ 								goto on_fatal_error;
+ 							}
+ 							error_count = 0;
+-							mlt_log_debug( MLT_CONSUMER_SERVICE( consumer ), "audio stream %d pkt pts %"PRId64" frame_size %d stream pts %"PRId64"\n",
+-								stream->index, pkt.pts, codec->frame_size, stream->pts.val );
++							mlt_log_debug( MLT_CONSUMER_SERVICE( consumer ), "audio stream %d pkt pts %"PRId64" frame_size %d\n",
++								stream->index, pkt.pts, codec->frame_size );
+ 						}
+ 						else if ( pkt.size < 0 )
+ 						{
+@@ -1800,7 +1801,7 @@
+ 
+ 						if ( i == 0 )
+ 						{
+-							audio_pts = (double)stream->pts.val * av_q2d( stream->time_base );
++							audio_pts = (double) sample_count[0] * av_q2d( stream->time_base );
+ 						}
+ 					}
+ 				}
+@@ -1974,7 +1975,6 @@
+ 							// write the compressed frame in the media file
+ 							ret = av_interleaved_write_frame(oc, &pkt);
+ 							mlt_log_debug( MLT_CONSUMER_SERVICE( consumer ), " frame_size %d\n", c->frame_size );
+-							video_pts = (double)video_st->pts.val * av_q2d( video_st->time_base );
+ 							
+ 							// Dual pass logging
+ 							if ( mlt_properties_get_data( properties, "_logfile", NULL ) && c->stats_out )
+@@ -1990,7 +1990,8 @@
+ 							ret = 0;
+ 						}
+  					}
+- 					frame_count++;
++					frame_count++;
++					video_pts = (double) frame_count * av_q2d( video_st->time_base );
+ 					if ( ret )
+ 					{
+ 						mlt_log_fatal( MLT_CONSUMER_SERVICE( consumer ), "error writing video frame\n" );
+@@ -2006,9 +2007,9 @@
+ 				}
+ 			}
+ 			if ( audio_st[0] )
+-				mlt_log_debug( MLT_CONSUMER_SERVICE( consumer ), "audio pts %"PRId64" (%f) ", audio_st[0]->pts.val, audio_pts );
++				mlt_log_debug( MLT_CONSUMER_SERVICE( consumer ), "audio pts %f ", audio_pts );
+ 			if ( video_st )
+-				mlt_log_debug( MLT_CONSUMER_SERVICE( consumer ), "video pts %"PRId64" (%f) ", video_st->pts.val, video_pts );
++				mlt_log_debug( MLT_CONSUMER_SERVICE( consumer ), "video pts %f ", video_pts );
+ 			mlt_log_debug( MLT_CONSUMER_SERVICE( consumer ), "\n" );
+ 		}
+ 
+@@ -2062,9 +2063,8 @@
+ 				pkt.size = audio_outbuf_size;
+ 				audio_avframe->nb_samples = FFMAX( samples / channels, audio_input_nb_samples );
+ #if LIBAVCODEC_VERSION_MAJOR >= 55
+-				if ( audio_codec_id == AV_CODEC_ID_VORBIS )
+-					audio_avframe->pts = synth_audio_pts;
+-				synth_audio_pts += audio_avframe->nb_samples;
++				audio_avframe->pts = sample_count[0];
++				sample_count[0] += audio_avframe->nb_samples;
+ #endif
+ 				avcodec_fill_audio_frame( audio_avframe, c->channels, c->sample_fmt,
+ 					(const uint8_t*) p, AUDIO_ENCODE_BUFFER_SIZE, 0 );
