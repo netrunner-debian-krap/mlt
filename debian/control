@@ -25,7 +25,7 @@ Build-Depends: debhelper (>= 9),
  frei0r-plugins-dev,
  swig,
  python-all-dev (>= 2.6.6-3~)
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Section: libs
 Homepage: http://www.mltframework.org
 
