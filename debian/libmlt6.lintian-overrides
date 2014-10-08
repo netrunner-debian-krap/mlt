@@ -1,2 +1,1 @@
 libmlt6: no-symbols-control-file usr/lib/*/libmlt.so.*
-libmlt6: spelling-error-in-binary usr/lib/*/libmlt.so.* tEH the
