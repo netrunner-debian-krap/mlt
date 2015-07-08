@@ -13,7 +13,6 @@ DEB_CONFIGURE_EXTRA_FLAGS := \
 	--enable-motion_est \
 	$(EXTRA_CONFIGURE_OPTS) \
 	--avformat-shared=/usr \
-	--avformat-swscale \
 	--swig-languages=python \
 	--qimage-libdir=/usr/lib \
 	--disable-rtaudio \
