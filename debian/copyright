@@ -451,8 +451,8 @@ License: GPL
  GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License
- along with this program; if not, write to the Free Software
- Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ along with this program; if not, write to the Free Software Foundation,
+ Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 
 Files: src/modules/xml/consumer_xml.c
 Copyright: 2003-2015, Meltytech, LLC
@@ -596,4 +596,4 @@ License: LGPL-2.1+
  your option) any later version.
  .
  On Debian systems, the complete text of version 2.1 of the GNU Lesser
- Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
+ General Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
