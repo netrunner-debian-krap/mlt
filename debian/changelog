@@ -1,9 +1,9 @@
-mlt (0.9.6-3) UNRELEASED; urgency=low
+mlt (0.9.6-3) unstable; urgency=low
 
   * Build against Qt5.
   * Update to DEP5 debian/copyright format.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 08 Jul 2015 20:59:12 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 08 Jul 2015 21:33:13 +0200
 
 mlt (0.9.6-2) unstable; urgency=low
 
