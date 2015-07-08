@@ -1,6 +1,7 @@
 mlt (0.9.6-3) UNRELEASED; urgency=low
 
   * Build against Qt5.
+  * Update to DEP5 debian/copyright format.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Wed, 08 Jul 2015 20:59:12 +0200
 

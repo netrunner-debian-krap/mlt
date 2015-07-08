@@ -1,334 +1,599 @@
-This package was debianized by Fathi Boudra <fabo@debian.org> on
-Sat, 26 Jan 2008 19:31:08 +0100.
-
-It was downloaded from http://www.mltframework.org
-
-Upstream Authors:
-
-    Ushodaya Enterprises Limited
-    Charles Yates <charles.yates@pandora.be>
-    Dan Dennedy <dan@dennedy.org>
-
-Copyright:
-    © 2002-2013 Ushodaya Enterprises Limited
-	© 2008-2013 Dan Dennedy <dan@dennedy.org>
-	© 2004-2005 Charles Yates
-
-
-License (src/melt/, src/modules/dgraft/, src/modules/effectv/,
-        src/modules/jackrack/ (except of jackrack/consumer_jack.c),
-		src/modules/kino/, src/modules/linsys/, src/modules/motion_est/,
-		src/modules/normalize/, src/modules/oldfilm/filter_*.yml,
-		src/modules/opengl/ (except of opengl/consumer_xgl.c),
-		src/modules/plus/interp.h, src/modules/qimage/factory.c,
-		src/modules/qimage/producer_qimage.c,
-		src/modules/qimage/qimage_wrapper.*, src/modules/resample/,
-		src/modules/rotoscoping/factory.c,
-		src/modules/rotoscoping/filter_rotoscoping.*,
-		src/modules/videostab/stab/, src/modules/videostab/stabilize.*,
-		src/modules/videostab/filter_videostab*,
-		src/modules/videostab/transform*,
-		src/modules/xine/ (except of xine/yadif.*),
-		src/swig/python/webvfx_generator.py):
-
-    This program is free software; you can redistribute it and/or
-    modify it under the terms of the GNU General Public License
-    as published by the Free Software Foundation; either version 2
-    of the License, or (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-
-On Debian systems, the complete text of the GNU General Public License
-can be found in /usr/share/common-licenses/GPL-2 file.
-
-
-License (src/modules/qimage/transition_vqm.*):
-
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-On Debian systems, the complete text of the GNU General Public License
-can be found in /usr/share/common-licenses/GPL-3 file.
-
-
-License (src/modules/rotoscoping/cJSON.*, src/modules/rtaudio/RtAudio.*):
-
-    Permission is hereby granted, free of charge, to any person
-    obtaining a copy of this software and associated documentation files
-    (the "Software"), to deal in the Software without restriction,
-    including without limitation the rights to use, copy, modify, merge,
-    publish, distribute, sublicense, and/or sell copies of the Software,
-    and to permit persons to whom the Software is furnished to do so,
-    subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be
-    included in all copies or substantial portions of the Software.
-
-    Any person wishing to distribute modifications to the Software is
-    asked to send the modifications to the original developer so that
-    they can be incorporated into the canonical version.  This is,
-    however, not a binding provision of this license.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
-    ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
-    CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-    WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-License (src/modules/decklink/*/DeckLinkAPIDispatch.cpp,
-        src/modules/decklink/*/DeckLinkAPI.h,
-        src/modules/decklink/linux/LinuxCOM.h):
-
-    Permission is hereby granted, free of charge, to any person or organization
-    obtaining a copy of the software and accompanying documentation covered by
-    this license (the "Software") to use, reproduce, display, distribute,
-    execute, and transmit the Software, and to prepare derivative works of the
-    Software, and to permit third-parties to whom the Software is furnished to
-    do so, all subject to the following:
-
-    The copyright notices in the Software and this entire statement, including
-    the above license grant, this restriction and the following disclaimer,
-    must be included in all copies of the Software, in whole or in part, and
-    all derivative works of the Software, unless such copies or derivative
-    works are solely in the form of machine-executable object code generated by
-    a source language processor.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
-    SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
-    FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
-    ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-    DEALINGS IN THE SOFTWARE.
-
-
-License (src/win32/fnmatch.*):
-
-    Redistribution and use in source and binary forms, with or without
-    modification, are permitted provided that the following conditions
-    are met:
-    1. Redistributions of source code must retain the above copyright
-       notice, this list of conditions and the following disclaimer.
-    2. Redistributions in binary form must reproduce the above copyright
-       notice, this list of conditions and the following disclaimer in the
-       documentation and/or other materials provided with the distribution.
-    3. All advertising materials mentioning features or use of this software
-       must display the following acknowledgement:
-       This product includes software developed by the University of
-       California, Berkeley and its contributors.
-    4. Neither the name of the University nor the names of its contributors
-       may be used to endorse or promote products derived from this software
-       without specific prior written permission.
-
-    THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
-    ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-    ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
-    FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-    OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-    LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-    OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-    SUCH DAMAGE.
-
-
-License (src/swig/mlt.i):
-
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Lesser General Public
-    License as published by the Free Software Foundation; either
-    version 2 of the License, or (at your option) any later version.
-
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-    Lesser General Public License for more details.
-
-    You should have received a copy of the GNU Lesser General Public
-    License along with this library; if not, write to the Free Software
-	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
-
-On Debian systems, the complete text of the GNU Lesser General Public License
-can be found in /usr/share/common-licenses/LGPL-2.
-
-
-License (everything else):
-
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Lesser General Public
-    License as published by the Free Software Foundation; either
-    version 2.1 of the License, or (at your option) any later version.
-
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-    Lesser General Public License for more details.
-
-    You should have received a copy of the GNU Lesser General Public
-    License along with this library; if not, write to the Free Software
-	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
-
-On Debian systems, the complete text of the GNU Lesser General Public License
-can be found in /usr/share/common-licenses/LGPL-2.1.
-
-
-Additional copyright holders:
-
-src/modules/xine/deinterlace.h, src/modules/xine/xineutils.h,
-src/modules/xine/deinterlace.c:
-    Copyright © 2000-2004 the xine project
-
-src/modules/xine/yadif.*, src/modules/xine/vf_yadif_template.h:
-	Copyright © 2006 Michael Niedermayer <michaelni@gmx.at>
-	Copyright © 2007 Alexander G. Balakhnin aka Fizick  http://avisynth.org.ru
-
-src/modules/xine/attributes.h, src/modules/xine/cpu_accel.c:
-	Copyright © 1999-2001 Aaron Holtzman <aholtzma@ess.engr.uvic.ca>
-
-src/modules/sdl/producer_sdl_image.c:
-    Copyright © 2005 Visual Media FX
-
-src/modules/core/transition_luma.c:
-    Copyright © 2002 Timothy M. Shead <tshead@k-3d.com>
-
-src/modules/avformat/consumer_avformat.c, src/modules/avformat/producer_avformat.c:
-    Copyright © 2000-2003 Fabrice Bellard
-
-src/modules/jackrack/process.*, src/modules/jackrack/plugin_settings.*,
-src/modules/jackrack/plugin.*, src/modules/jackrack/lock_free_fifo.*,
-src/modules/jackrack/jack_rack.*, src/modules/jackrack/plugin_desc.*,
-src/modules/jackrack/plugin_mgr.*:
-    Copyright © Robert Ham 2002, 2003 (node@users.sourceforge.net)
-
-src/modules/vmfx/filter_chroma.c, src/modules/vmfx/producer_pgm.c,
-src/modules/vmfx/factory.c, src/modules/vmfx/filter_mono.c,
-src/modules/vmfx/filter_shape.c, src/modules/vmfx/filter_chroma_hold.c,
-src/modules/qimage/factory.c, src/modules/qimage/producer_qimage.c,
-src/modules/qimage/qimage_wrapper.*:
-    Copyright © 2005-2006 Visual Media Fx Inc.
-
-src/modules/effectv/utils.*, src/modules/effectv/image.c,
-src/modules/effectv/filter_burn.c:
-    Copyright © 2001-2006 FUKUCHI Kentaro
-
-src/modules/qimage/kdenlivetitle_wrapper.*, src/modules/qimage/producer_kdenlivetitle.c:
-    Copyright © 2009 Marco Gittler <g.marco@freenet.de>
-	Copyright © 2009 Jean-Baptiste Mardelle <jb@kdenlive.org>
-
-src/modules/kino/error.*, src/modules/kino/avi.*,
-src/modules/kino/filehandler.*, src/modules/kino/riff.*:
-    Copyright © 2000-2002 Arne Schirmacher <arne@schirmacher.de>
-
-src/modules/videostab/transform.*, src/modules/videostab/stabilize.*,
-src/modules/videostab/transform_image.*:
-    Copyright © June 2007 Georg Martius
-
-src/modules/videostab/stab/utils.c, src/modules/videostab/stab/main.c,
-src/modules/videostab/stab/estimate.c, src/modules/videostab/stab/vector.c,
-src/modules/videostab/stab/resample.c:
-    Copyright © 2008 Lenny <leonardo.masoni@gmail.com>
-
-src/modules/videostab/filter_videostab*, src/modules/videostab/factory.c:
-    Copyright © 2011 Marco Gittler <g.marco@freenet.de>
-
-src/modules/kino/endian_types.h:
-    Copyright © 2003-2005 Daniel Kobras <kobras@debian.org>
-
-src/modules/normalize/filter_audiolevel.c:
-    Copyright © 2002 Steve Harris
-	Copyright © 2010 Marco Gittler <g.marco@freenet.de>
-
-src/modules/normalize/filter_volume.c:
-    Copyright © 1999--2002 Chris Vaill
-
-src/modules/motion_est/arrow_code.*, src/modules/motion_est/filter_*:
-    Copyright © 2004-2005 Zachary Drew
-
-src/modules/frei0r/, src/modules/oldfilm/filter_*, src/modules/oldfilm/factory.c:
-	Copyright © 2007-2008 Marco Gittler <g.marco@freenet.de>
-
-src/modules/frei0r/producer_frei0r.c:
-    Copyright © 2009 Jean-Baptiste Mardelle <jb@kdenlive.org>
-
-src/modules/opengl/filter_glsl_manager.cpp, src/modules/opengl/consumer_xgl.c:
-    Copyright © 2011-2012 Christophe Thommeret <hftom@free.fr>
-
-src/modules/linsys/consumer_SDIstream.c, src/modules/linsys/sdi_generator.c:
-    Copyright © Broadcasting Center Europe S.A. http://www.bce.lu
-
-src/framework/mlt_log.c:
-    Copyright © Michel Bardiaux
-
-src/modules/plus/interp.h:
-    Copyright © 2010 Marko Cebokli http://lea.hamradio.si/~s57uuu
-
-src/modules/dgraft/filter_telecide.c:
-    Copyright © 2003 Donald A. Graft
-
-src/modules/gtk2/pixops.*, src/modules/gtk2/have_mmx.S:
-    Copyright © 2000 Red Hat, Inc
-
-src/modules/gtk2/producer_count.c:
-    Copyright © 2013 Brian Matherly
-
-src/win32/fnmatch.*:
-    Copyright © 1989, 1992, 1993, 1994 The Regents of the University of California
-
-src/modules/rotoscoping/cJSON.*:
-	Copyright © 2009 Dave Gamble
-
-src/modules/kdenlive/filter_wave.c, src/modules/kdenlive/filter_boxblur.c:
-    Copyright © ?-2007 Leny Grisel <leny.grisel@laposte.net>
-
-src/modules/kdenlive/filter_boxblur.c, src/modules/kdenlive/filter_freeze.c,
-src/modules/kdenlive/producer_framebuffer.c, src/modules/kdenlive/filter_wave.c,
-src/modules/kdenlive/factory.c:
-    Copyright © 2007 Jean-Baptiste Mardelle <jb@kdenlive.org>
-
-src/modules/rotoscoping/filter_rotoscoping.*:
-    Copyright © 2011 Till Theato <root@ttill.de>
-
-src/modules/rtaudio/RtAudio.*:
-    Copyright © 2001-2011 Gary P. Scavone
-
-src/modules/effectv/filter_burn.c, src/modules/effectv/factory.c:
-    Copyright © 2007 Stephane Fillod
-
-src/modules/avsync/consumer_blipflash.yml, src/modules/avsync/producer_blipflash.yml:
-    Copyright © 2013 Brian Matherly
-
-src/modules/avformat/mmx.h:
-    Copyright © 1997-2001 H. Dietz and R. Fisher
-
-src/modules/effectv/image.c, src/modules/effectv/utils.*:
-    Copyright © 2001-2006 FUKUCHI Kentaro
-
-src/modules/decklink/*/DeckLinkAPIDispatch.cpp, src/modules/decklink/linux/LinuxCOM.h,
-src/modules/decklink/linux/DeckLinkAPI.h:
-	Copyright © 2009 Blackmagic Design
-
-src/modules/decklink/darwin/DeckLinkAPI.h:
-    Copyright © 2011 Blackmagic Design
-
-
-The Debian packaging is © 2008 Fathi Boudra <fabo@debian.org>,
-© 2009-2013 Patrick Matthäi <pmatthaei@debian.org> and
-is licensed under the GPL, see `/usr/share/common-licenses/GPL-2'.
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+
+Files: *
+Copyright: 2003-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/framework/mlt_animation.c
+  src/framework/mlt_animation.h
+  src/framework/mlt_events.c
+  src/framework/mlt_events.h
+  src/framework/mlt_geometry.c
+  src/framework/mlt_geometry.h
+  src/framework/mlt_log.c
+  src/framework/mlt_log.h
+Copyright: 2004-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/framework/mlt_cache.c
+  src/framework/mlt_cache.h
+  src/framework/mlt_profile.c
+  src/framework/mlt_profile.h
+Copyright: 2007-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/framework/mlt_tokeniser.c
+  src/framework/mlt_tokeniser.h
+Copyright: 2002-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/framework/mlt_version.c
+Copyright: 2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/framework/mlt_version.h
+Copyright: 2010-2015, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/melt/*
+Copyright: 2002-2014, Meltytech, LLC
+License: GPL-2+
+
+Files: src/mlt++/*
+Copyright: 2004-2015, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/mlt++/MltFactory.cpp
+  src/mlt++/MltFactory.h
+Copyright: 2008, Dan Dennedy <dan@dennedy.org>
+  2004-2015, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/mlt++/MltProfile.cpp
+  src/mlt++/MltProfile.h
+  src/mlt++/MltRepository.cpp
+  src/mlt++/MltRepository.h
+Copyright: 2008, 2010-2014, Dan Dennedy <dan@dennedy.org>
+License: LGPL-2.1+
+
+Files: src/modules/avformat/filter_avcolour_space.c
+Copyright: 2004-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/avformat/filter_swscale.c
+Copyright: 2008-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/avformat/vdpau.c
+Copyright: 2009-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/core/consumer_multi.c
+Copyright: 2011-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/core/filter_audiochannels.c
+  src/modules/core/filter_audioconvert.c
+  src/modules/core/filter_crop.c
+  src/modules/core/filter_imageconvert.c
+Copyright: 2009-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/core/filter_audiowave.c
+  src/modules/core/filter_panner.c
+Copyright: 2010-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/core/filter_data_feed.c
+  src/modules/core/filter_data_show.c
+Copyright: 2004-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/core/filter_fieldorder.c
+Copyright: 2011-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/core/filter_transition.c
+Copyright: 2005-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/core/producer_consumer.c
+Copyright: 2008-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/core/producer_tone.c
+Copyright: 2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/core/transition_luma.c
+Copyright: 2003-2014, Meltytech, LLC
+  2002, Timothy M. Shead <tshead@k-3d.com>
+License: LGPL-2.1+
+
+Files: src/modules/decklink/*
+Copyright: 2008, 2010-2014, Dan Dennedy <dan@dennedy.org>
+License: LGPL-2.1+
+
+Files: src/modules/decklink/darwin/*
+Copyright: 2009, 2011, Blackmagic Design
+License: BSL
+
+Files: src/modules/decklink/linux/*
+Copyright: 2009, 2011, Blackmagic Design
+License: BSL
+
+Files: src/modules/frei0r/*
+Copyright: 2007, 2008, 2011, Marco Gittler <g.marco@freenet.de>
+License: LGPL-2.1+
+
+Files: src/modules/frei0r/producer_frei0r.c
+Copyright: 2007, 2009, Jean-Baptiste Mardelle <jb@kdenlive.org>
+License: LGPL-2.1+
+
+Files: src/modules/gtk2/pixops.c
+  src/modules/gtk2/pixops.h
+Copyright: 2003-2014, Meltytech, LLC
+  2000, Red Hat, Inc
+License: LGPL-2+
+
+Files: src/modules/jackrack/*
+Copyright: Robert Ham 2002, 2003 (node@users.sourceforge.net) / 2004-2014, Meltytech, LLC
+License: GPL-2+
+
+Files: src/modules/jackrack/consumer_jack.c
+Copyright: 2011-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/jackrack/factory.c
+  src/modules/jackrack/filter_jackrack.c
+  src/modules/jackrack/filter_ladspa.c
+  src/modules/jackrack/producer_ladspa.c
+Copyright: 2002-2014, Meltytech, LLC
+License: GPL-2+
+
+Files: src/modules/kdenlive/*
+Copyright: 2007, Jean-Baptiste Mardelle <jb@ader.ch>
+  -2007, Leny Grisel <leny.grisel@laposte.net>
+License: LGPL-2.1+
+
+Files: src/modules/kdenlive/factory.c
+Copyright: 2007, Jean-Baptiste Mardelle
+License: LGPL-2.1+
+
+Files: src/modules/kdenlive/filter_freeze.c
+Copyright: 2007, 2009, Jean-Baptiste Mardelle <jb@kdenlive.org>
+License: LGPL-2.1+
+
+Files: src/modules/kdenlive/producer_framebuffer.c
+Copyright: 2007, Jean-Baptiste Mardelle <jb@ader.ch>
+License: LGPL-2.1+
+
+Files: src/modules/kino/*
+Copyright: 2000-2002, Arne Schirmacher <arne@schirmacher.de>
+License: GPL-2+
+
+Files: src/modules/kino/endian_types.h
+Copyright: 2003-2005, Daniel Kobras <kobras@debian.org>
+License: GPL-2+
+
+Files: src/modules/kino/factory.c
+  src/modules/kino/kino_wrapper.cc
+  src/modules/kino/kino_wrapper.h
+  src/modules/kino/producer_kino.c
+Copyright: 2002-2014, Meltytech, LLC
+License: GPL-2+
+
+Files: src/modules/linsys/*
+Copyright: Broadcasting Center Europe S.A. http://www.bce.lu
+License: GPL-2+
+
+Files: src/modules/motion_est/*
+Copyright: 2004
+License: GPL-2+
+
+Files: src/modules/motion_est/factory.c
+  src/modules/motion_est/producer_slowmotion.c
+  src/modules/motion_est/sad_sse.h
+Copyright: no-info-found
+License: GPL-2+
+
+Files: src/modules/motion_est/filter_autotrack_rectangle.c
+  src/modules/motion_est/filter_crop_detect.c
+  src/modules/motion_est/filter_motion_est.c
+Copyright: 2005
+License: GPL-2+
+
+Files: src/modules/normalize/*
+Copyright: Steve Harris / 2012, Dan Dennedy <dan@dennedy.org> / 2010, Marco Gittler <g.marco@freenet.de> / 2002, Steve Harris
+License: GPL-2+
+
+Files: src/modules/normalize/factory.c
+Copyright: 2002-2014, Meltytech, LLC
+License: GPL-2+
+
+Files: src/modules/normalize/filter_volume.c
+Copyright: 2003-2014, Meltytech, LLC
+  1999-2002, Chris Vaill
+License: GPL-2+
+
+Files: src/modules/oldfilm/*
+Copyright: 2007, 2008, 2011, Marco Gittler <g.marco@freenet.de>
+License: LGPL-2.1+
+
+Files: src/modules/opengl/*
+Copyright: 2008-2014, Dan Dennedy <dan@dennedy.org>
+License: GPL-2+
+
+Files: src/modules/opengl/consumer_xgl.c
+Copyright: 2012, Christophe Thommeret
+License: LGPL-2.1+
+
+Files: src/modules/opengl/filter_glsl_manager.cpp
+Copyright: 2013, Dan Dennedy <dan@dennedy.org>
+  2011, 2012, Christophe Thommeret <hftom@free.fr>
+License: GPL-2+
+
+Files: src/modules/plus/consumer_blipflash.c
+  src/modules/plus/producer_blipflash.c
+  src/modules/plus/producer_count.c
+Copyright: 2013, Brian Matherly
+License: LGPL-2.1+
+
+Files: src/modules/plus/ebur128/queue.h
+Copyright: 1991, 1993
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 4. Neither the name of the University nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
+Files: src/modules/plus/filter_dynamictext.c
+Copyright: 2011-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/plus/filter_lift_gamma_gain.c
+  src/modules/plus/filter_loudness.c
+Copyright: 2014, Brian Matherly <pez4brian@yahoo.com>
+License: LGPL-2.1+
+
+Files: src/modules/plus/filter_lumakey.c
+  src/modules/plus/filter_rgblut.c
+Copyright: 2014, Janne Liljeblad
+License: LGPL-2.1+
+
+Files: src/modules/plus/interp.h
+Copyright: 2010, Marko Cebokli http://lea.hamradio.si/~s57uuu
+License: GPL-2+
+
+Files: src/modules/plusgpl/cJSON.c
+  src/modules/plusgpl/cJSON.h
+Copyright: 2009, Dave Gamble
+License: Expat
+
+Files: src/modules/plusgpl/consumer_cbrts.c
+Copyright: Lorenzo Pallara <l.pallara@avalpa.com> / 2010-2014, Broadcasting Center Europe S.A. http://www.bce.lu
+License: GPL-2+
+
+Files: src/modules/plusgpl/factory.c
+Copyright: 2008-2014, Dan Dennedy <dan@dennedy.org>
+License: GPL-2+
+
+Files: src/modules/plusgpl/filter_burn.c
+Copyright: 2007, Stephane Fillod
+  2001-2006, FUKUCHI Kentaro
+License: GPL-2+
+
+Files: src/modules/plusgpl/filter_lumaliftgaingamma.c
+Copyright: 2014, Janne Liljeblad
+License: GPL-2+
+
+Files: src/modules/plusgpl/filter_rotoscoping.c
+Copyright: 2011, Till Theato <root@ttill.de>
+License: GPL-2+
+
+Files: src/modules/plusgpl/filter_telecide.c
+Copyright: 2008, Dan Dennedy <dan@dennedy.org>
+  2003, Donald A. Graft
+License: GPL-2+
+
+Files: src/modules/qt/*
+Copyright: 2006, Visual Media
+License: GPL-2+
+
+Files: src/modules/qt/common.cpp
+  src/modules/qt/common.h
+  src/modules/qt/consumer_qglsl.cpp
+Copyright: 2008, 2010-2014, Dan Dennedy <dan@dennedy.org>
+License: LGPL-2.1+
+
+Files: src/modules/qt/kdenlivetitle_wrapper.cpp
+  src/modules/qt/kdenlivetitle_wrapper.h
+  src/modules/qt/producer_kdenlivetitle.c
+Copyright: 2009, Marco Gittler <g.marco@freenet.de>
+  2009, Jean-Baptiste Mardelle <jb@kdenlive.org>
+License: LGPL-2.1+
+
+Files: src/modules/qt/producer_qtext.cpp
+Copyright: 2013, Brian Matherly
+License: LGPL-2.1+
+
+Files: src/modules/qt/transition_vqm.cpp
+Copyright: 2012, Dan Dennedy <dan@dennedy.org>
+  2010, E. Oriani, ema <AT> fastwebnet <DOT> it
+License: GPL-3+
+
+Files: src/modules/resample/*
+Copyright: 2002-2014, Meltytech, LLC
+License: GPL-2+
+
+Files: src/modules/rtaudio/*
+Copyright: 2001-2011, Gary P. Scavone
+License: Expat
+
+Files: src/modules/rtaudio/consumer_rtaudio.cpp
+Copyright: 2008, 2010-2014, Dan Dennedy <dan@dennedy.org>
+License: LGPL-2.1+
+
+Files: src/modules/sdl/consumer_sdl_audio.c
+Copyright: 2009-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/sdl/consumer_sdl_osx.h
+  src/modules/sdl/consumer_sdl_osx.m
+Copyright: 2010-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/sdl/consumer_sdl_osx_hack.h
+Copyright: no-info-found
+License: LGPL-2.1+
+
+Files: src/modules/sdl/consumer_sdl_preview.c
+Copyright: 2004-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/sdl/producer_sdl_image.c
+Copyright: 2005-2014, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/modules/swfdec/*
+Copyright: 2008, 2010-2014, Dan Dennedy <dan@dennedy.org>
+License: LGPL-2.1+
+
+Files: src/modules/vid.stab/*
+Copyright: 2014, Brian Matherly <pez4brian@yahoo.com>
+  2013, Marco Gittler <g.marco@freenet.de>
+  2013, Jakub Ksiezniak <j.ksiezniak@gmail.com>
+License: GPL-2+
+
+Files: src/modules/vid.stab/common.c
+Copyright: 2014, Brian Matherly <pez4brian@yahoo.com>
+License: GPL-2+
+
+Files: src/modules/vid.stab/common.h
+Copyright: 2014, Brian Matherly <pez4brian@yahoo.com>
+  2013, Jakub Ksiezniak <j.ksiezniak@gmail.com>
+License: GPL-2+
+
+Files: src/modules/vid.stab/factory.c
+Copyright: 2008-2014, Dan Dennedy <dan@dennedy.org>
+License: GPL-2+
+
+Files: src/modules/videostab/*
+Copyright: Georg Martius - June 2007
+License: GPL-2+
+
+Files: src/modules/videostab/factory.c
+Copyright: 2007, 2008, 2011, Marco Gittler <g.marco@freenet.de>
+License: LGPL-2.1+
+
+Files: src/modules/videostab/filter_videostab.c
+  src/modules/videostab/filter_videostab2.c
+Copyright: 2011, Marco Gittler <g.marco@freenet.de>
+License: GPL-2+
+
+Files: src/modules/videostab/stab/*
+Copyright: 2008, Lenny <leonardo.masoni@gmail.com>
+License: GPL-2+
+
+Files: src/modules/vmfx/*
+Copyright: 2005, Visual Media Fx Inc
+License: LGPL-2+
+
+Files: src/modules/xine/*
+Copyright: 2000-2004, the xine project
+License: GPL-2+
+
+Files: src/modules/xine/attributes.h
+  src/modules/xine/cpu_accel.c
+Copyright: 1999-2001, Aaron Holtzman <aholtzma@ess.engr.uvic.ca>
+License: GPL-2+
+
+Files: src/modules/xine/factory.c
+  src/modules/xine/filter_deinterlace.c
+Copyright: 2002-2014, Meltytech, LLC
+License: GPL-2+
+
+Files: src/modules/xine/vf_yadif_template.h
+Copyright: 2006, Michael Niedermayer <michaelni@gmx.at>
+License: GPL-2+
+
+Files: src/modules/xine/yadif.c
+  src/modules/xine/yadif.h
+Copyright: 2007, Alexander G. Balakhnin aka Fizick http://avisynth.org.ru
+  2006, Michael Niedermayer <michaelni@gmx.at>
+License: GPL
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+Files: src/modules/xml/consumer_xml.c
+Copyright: 2003-2015, Meltytech, LLC
+License: LGPL-2.1+
+
+Files: src/swig/*
+Copyright: 2008-2014, Dan Dennedy <dan@dennedy.org>
+License: GPL-2+
+
+Files: src/tests/*
+Copyright: 2008, 2010-2014, Dan Dennedy <dan@dennedy.org>
+License: LGPL-2.1+
+
+Files: src/tests/test_filter/*
+Copyright: 2015, Brian Matherly <code@brianmatherly.com>
+License: LGPL-2.1+
+
+Files: src/tests/test_frame/*
+Copyright: 2015, Brian Matherly <code@brianmatherly.com>
+License: LGPL-2.1+
+
+Files: src/win32/fnmatch.c
+Copyright: 1989, 1993, 1994
+License: BSD-4-clause
+
+Files: src/win32/fnmatch.h
+Copyright: 1992, 1993
+License: BSD-4-clause
+
+License: BSD-4-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. All advertising materials mentioning features or use of this software
+    must display the following acknowledgement:
+    This product includes software developed by the University of
+    California, Berkeley and its contributors.
+ 4. Neither the name of the University nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
+License: BSL
+ Permission is hereby granted, free of charge, to any person or organization
+ obtaining a copy of the software and accompanying documentation covered by
+ this license (the "Software") to use, reproduce, display, distribute,
+ execute, and transmit the Software, and to prepare derivative works of the
+ Software, and to permit third-parties to whom the Software is furnished to
+ do so, all subject to the following:
+ .
+ The copyright notices in the Software and this entire statement, including
+ the above license grant, this restriction and the following disclaimer,
+ must be included in all copies of the Software, in whole or in part, and
+ all derivative works of the Software, unless such copies or derivative
+ works are solely in the form of machine-executable object code generated by
+ a source language processor.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
+ SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
+ FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ DEALINGS IN THE SOFTWARE.
+
+License: Expat
+ The MIT License
+ .
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated
+ documentation files (the "Software"), to deal in the Software
+ without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to
+ whom the Software is furnished to do so, subject to the
+ following conditions:
+ .
+ The above copyright notice and this permission notice shall
+ be included in all copies or substantial portions of the
+ Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
+ WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR
+ PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+ SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 2 dated June, 1991, or (at
+ your option) any later version.
+ .
+ On Debian systems, the complete text of version 2 of the GNU General
+ Public License can be found in '/usr/share/common-licenses/GPL-2'.
+
+License: GPL-3+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; version 3 dated June, 2007, or (at
+ your option) any later version.
+ .
+ On Debian systems, the complete text of version 3 of the GNU General
+ Public License can be found in '/usr/share/common-licenses/GPL-3'.
+
+License: LGPL-2+
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Library General Public License as published by the
+ Free Software Foundation; version 2 of the License, or (at
+ your option) any later version.
+ .
+ On Debian systems, the complete text of version 2 of the GNU Library
+ Public License can be found in `/usr/share/common-licenses/LGPL-2'.
+
+License: LGPL-2.1+
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License as published by the
+ Free Software Foundation; version 2.1 of the License, or (at
+ your option) any later version.
+ .
+ On Debian systems, the complete text of version 2.1 of the GNU Lesser
+ Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
