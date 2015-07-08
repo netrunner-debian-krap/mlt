@@ -4,9 +4,8 @@ Maintainer: Fathi Boudra <fabo@debian.org>
 Uploaders: Patrick Matthäi <pmatthaei@debian.org>
 Build-Depends: debhelper (>= 9),
  ffmpeg,
- kdelibs5-dev,
- libqt4-dev,
- libqt4-opengl-dev,
+ libqt5opengl5-dev,
+ libqt5svg5-dev,
  ladspa-sdk,
  libavdevice-ffmpeg-dev,
  libavformat-ffmpeg-dev,
