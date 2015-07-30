@@ -23,6 +23,7 @@ Build-Depends: debhelper (>= 9),
  imagemagick,
  frei0r-plugins-dev,
  swig,
+ dh-python,
  python-all-dev (>= 2.6.6-3~)
 Standards-Version: 3.9.6
 Section: libs
