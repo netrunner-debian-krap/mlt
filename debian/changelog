@@ -1,5 +1,6 @@
-mlt (0.9.6-4) UNRELEASED; urgency=medium
+mlt (0.9.8-1) UNRELEASED; urgency=medium
 
+  * New upstream release.
   * Point debian/watch to GitHub.
 
  -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 30 Jul 2015 09:51:18 +0200
