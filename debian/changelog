@@ -1,11 +1,11 @@
-mlt (0.9.8-1) UNRELEASED; urgency=medium
+mlt (0.9.8-1) unstable; urgency=medium
 
   * New upstream release.
   * Point debian/watch to GitHub.
   * Add additional files to dh_auto_clean.
   * Add build dependency dh-python.
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 30 Jul 2015 09:51:18 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 30 Jul 2015 10:07:21 +0200
 
 mlt (0.9.6-3) unstable; urgency=low
 
