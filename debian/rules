@@ -28,7 +28,7 @@ override_dh_auto_configure:
 
 override_dh_auto_clean:
 	[ ! -f config.mak ] || $(MAKE) distclean
-	rm -f config.log *.pc src/modules/gtk2/config.h
+	rm -f config.log *.pc src/modules/gtk2/config.h packages.dat src/modules/make.inc
 	find \( -name '*.o' -o -name '*.mak' -o -name '.depend' \) -delete
 
 override_dh_install:
