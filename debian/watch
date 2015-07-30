@@ -1,3 +1,4 @@
 version=3
 opts=dversionmangle=s/\+git\d+//;s/\+dfsg\d// \
-	http://sf.net/mlt/mlt-([\d.]*)\.tar\.gz
+https://github.com/mltframework/mlt/releases \
+/mltframework/mlt/archive/v(.+)\.tar\.gz
