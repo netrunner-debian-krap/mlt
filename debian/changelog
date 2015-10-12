@@ -1,9 +1,9 @@
-mlt (0.9.8-2) UNRELEASED; urgency=medium
+mlt (0.9.8-2) unstable; urgency=medium
 
   * Correct build dependencies.
     Closes: #801284
 
- -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 12 Oct 2015 15:52:43 +0200
+ -- Patrick Matthäi <pmatthaei@debian.org>  Mon, 12 Oct 2015 15:54:01 +0200
 
 mlt (0.9.8-1) unstable; urgency=medium
 
