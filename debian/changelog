@@ -1,3 +1,11 @@
+mlt (0.9.8-3) UNRELEASED; urgency=high
+
+  * Add upstream patch 01-mlt_ffmpeg-2.9 to fix a FTBFS with newer FFmpeg
+    releases.
+    Closes: #803841
+
+ -- Patrick Matthäi <pmatthaei@debian.org>  Thu, 05 Nov 2015 14:30:00 +0100
+
 mlt (0.9.8-2) unstable; urgency=medium
 
   * Correct build dependencies.
